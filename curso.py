@@ -10,14 +10,18 @@ opciones = st.sidebar.selectbox("Selecciona la clase que deseas ver:",["Mi prime
 
 if opciones == "Mi primer programa en Python":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Mi primer programa en Python</h2>', unsafe_allow_html=True)
+    st.write("Por Luisa Gomez (luisa.gomez@pucp.edu.pe)")
+    
 
     # Descripción general
     st.code("print('¡Hola Mundo!')", language='python')
 
     st.write("""
     <p style='text-align: justify;'>
-    Al aprender a programar, se acostumbra comenzar con un ejemplo sencillo como se indica antes. 
-    Esta línea de código asegurará que sepamos cómo imprimir una cadena de caracteres (string) en el output (salida) y cómo ejecutar el código dentro de las celdas en un notebook (Google Colab o Jupyter notebook) o en un script de Python en VSCode que se visualizará en el terminal (output).
+    Al aprender a programar en Python, se acostumbra comenzar con un ejemplo sencillo como se indica antes. 
+    Esta línea de código nos enseña cómo imprimir una cadena de caracteres (string) en el output (salida), además de 
+    cómo ejecutar un código dentro de las celdas de un notebook (Google Colab o Jupyter) o 
+    en un script de Python en VSCode que ejecutará su visualización en el terminal (output).
     </p>
     """, unsafe_allow_html=True)
 
@@ -39,7 +43,8 @@ if opciones == "Mi primer programa en Python":
     # Descripción general
     st.write("""
     <p style='text-align: justify;'>
-    Visual Studio Code (VS Code) es un editor de código fuente ligero y rápido, ideal para quienes saben otros lenguajes de progración, incluyendo quienes recién están aprendiendo Python.
+    Visual Studio Code (VS Code) es un editor de código fuente ligero y rápido, 
+    ideal para quienes saben otros lenguajes de progración, incluyendo quienes recién están aprendiendo Python.
     Es fácil de usar y muy popular entre programadores. 
     </p>
     """, unsafe_allow_html=True)
@@ -123,17 +128,22 @@ if opciones == "Mi primer programa en Python":
 
     # Contenido del texto
     st.write("""
-    Estamos usando la función `print()` para imprimir el texto `'¡Hola mundo!'` en la pantalla (output). Es decir, la función `print()` muestra la cadena de caracteres (argumento) dentro de sus paréntesis en la pantalla.
+    Usamos la función `print()` para imprimir el texto `'¡Hola mundo!'` en la pantalla (output). 
+    Es decir, la función `print()` muestra la cadena de caracteres (argumento) dentro de sus paréntesis en la pantalla.
 
-    **Nota:** Una función es un bloque de código que realiza una tarea específica. Las funciones toman entradas (llamadas argumentos, un término para referirse a los valores que pones dentro de una función) y devuelven salidas. En este caso, la función `print()` toma el texto `'¡Hola mundo!'` como entrada y devuelve el mismo texto como salida, que se muestra en la pantalla.
-    
-    Existen otras formas de visualizar un argumento u objeto en el output.
+    **Nota:** Una función es un bloque de código que realiza una tarea específica. 
+    Las funciones toman entradas (llamadas argumentos, un término para referirse a los valores que introduces dentro de una función) 
+    y devuelven salidas. 
+             
+    En este caso, la función `print()` toma el texto `'¡Hola mundo!'` como entrada y devuelve el mismo texto como salida, 
+    que se muestra en la pantalla.
              
     """, unsafe_allow_html=True)
 
 
 if opciones == "Variables y tipos de datos en Python":
    st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Variables y tipos de datos en Python</h2>', unsafe_allow_html=True)
+   st.write("Por Luisa Gomez (luisa.gomez@pucp.edu.pe)")
    
    st.code("perro = 'Guau' \nprint(perro)", language='python')
  
