@@ -113,7 +113,7 @@ if opciones == "Mi primer programa en Python":
     print('¡Hola Mundo!')"""
 
    # Mostrar el código en un bloque con resaltado de sintaxis
-   st.code(codigo, language="python")
+    st.code(codigo, language="python")
 
     # Display both code blocks together
     if st.button("▶️", key="run_button"):
