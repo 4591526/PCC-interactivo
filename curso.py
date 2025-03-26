@@ -107,18 +107,19 @@ if opciones == "Mi primer programa en Python":
 
     # Bloque de texto para el título
     st.text("Mi primer programa en Python")
+            
     # Bloque de código con comentario explicativo
     codigo = """# Este programa imprime un mensaje en la pantalla
     print('¡Hola Mundo!')"""
 
    # Mostrar el código en un bloque con resaltado de sintaxis
    content_2 = st_monaco(
-                value=codigo,
-                height="120px",
-                language="python",
-                lineNumbers=True,
-                minimap=False,
-                theme="jupyter",)
+            value=codigo,
+            height="120px",
+            language="python",
+            lineNumbers=True,
+            minimap=False,
+            theme="jupyter",)
 
     # Display both code blocks together
     if st.button("▶️", key="run_button"):
