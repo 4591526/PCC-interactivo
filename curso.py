@@ -105,8 +105,22 @@ if opciones == "Mi primer programa en Python":
     # Mostrar en Streamlit
     st.dataframe(df)
 
-    # Bloque de texto para el título
-    st.text("Mi primer programa en Python")
+    # Bloque de texto en un box
+    st.markdown(
+    """
+    <div style="
+        border: 2px solid #4CAF50;
+        padding: 10px;
+        border-radius: 10px;
+        background-color: #f4f4f4;
+        text-align: center;
+        font-weight: bold;
+        font-size: 18px;">
+        La función print()
+    </div>
+    """,
+    unsafe_allow_html=True,
+    )
             
     # Bloque de código con comentario explicativo
     codigo = """# Este programa imprime un mensaje en la pantalla
