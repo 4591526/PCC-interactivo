@@ -113,13 +113,12 @@ if opciones == "Mi primer programa en Python":
 
    # Mostrar el código en un bloque con resaltado de sintaxis
    content_2 = st_monaco(
-    value=codigo,
-    height="120px",
-    language="python",
-    lineNumbers=True,
-    minimap=False,
-    theme="jupyter",
-    )
+                value=codigo,
+                height="120px",
+                language="python",
+                lineNumbers=True,
+                minimap=False,
+                theme="jupyter",)
 
     # Display both code blocks together
     if st.button("▶️", key="run_button"):
