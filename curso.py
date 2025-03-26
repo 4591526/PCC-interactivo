@@ -109,9 +109,7 @@ if opciones == "Mi primer programa en Python":
     st.markdown(
     """
     <div style="
-        border: 2px solid #c5c3b9;
         padding: 10px;
-        border-radius: 10px;
         background-color: #fefefb;
         font-weight: bold;
         font-size: 18px;">
