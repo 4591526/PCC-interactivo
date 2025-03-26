@@ -128,14 +128,14 @@ if opciones == "Mi primer programa en Python":
 
     # Contenido del texto
     st.write("""
-    Usamos la función `print()` para imprimir el texto `'¡Hola mundo!'` en la pantalla (output). 
+    Usamos la función `print()` para imprimir el texto `'¡Hola Mundo!'` en la pantalla (output). 
     Es decir, la función `print()` muestra la cadena de caracteres (argumento) dentro de sus paréntesis en la pantalla.
 
     **Nota:** Una función es un bloque de código que realiza una tarea específica. 
     Las funciones toman entradas (llamadas argumentos, un término para referirse a los valores que introduces dentro de una función) 
     y devuelven salidas. 
              
-    En este caso, la función `print()` toma el texto `'¡Hola mundo!'` como entrada y devuelve el mismo texto como salida, 
+    En este caso, la función `print()` toma el texto `'¡Hola Mundo!'` como entrada y devuelve el mismo texto como salida, 
     que se muestra en la pantalla.
              
     """, unsafe_allow_html=True)
