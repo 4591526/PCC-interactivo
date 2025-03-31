@@ -1,12 +1,13 @@
 import streamlit as st
 from streamlit_monaco import st_monaco
 import pandas as pd
+import graphviz
 
 #st.title("Pensamiento Computacional")
 
 st.sidebar.title("Pensamiento Computacional")
 opciones = st.sidebar.selectbox("Selecciona la clase que deseas ver:",["Mi primer programa en Python", 
-            "Variables y tipos de datos en Python"] )
+            "Variables", "Tipos de datos", "Operadores aritméticos"] )
 
 if opciones == "Mi primer programa en Python":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Mi primer programa en Python</h2>', unsafe_allow_html=True)
@@ -157,10 +158,175 @@ if opciones == "Mi primer programa en Python":
     """, unsafe_allow_html=True)
 
 
-if opciones == "Variables y tipos de datos en Python":
-   st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Variables y tipos de datos en Python</h2>', unsafe_allow_html=True)
+if opciones == "Variables":
+   st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Variables en Python</h2>', unsafe_allow_html=True)
    st.write("Por Luisa Gomez (luisa.gomez@pucp.edu.pe)")
    
-   st.code("perro = 'Guau' \nprint(perro)", language='python')
- 
- 
+   st.code("perro = 'guau' \nprint(perro)", language='python')
+
+    # Create the family tree graph
+   family_tree = graphviz.Digraph('family_tree')
+
+    # Set global attributes
+   family_tree.attr(rankdir='TB')  # Top-to-bottom alignment
+   family_tree.attr('edge', color='gray')
+
+    # Define nodes
+   family_tree.node('Valor1', label='14', shape='circle', style='filled', color='orange')
+   family_tree.node('Valor2', label='14', shape='circle', style='filled', color='orange')
+
+   family_tree.node('Variable1', label='Variable\nX', shape='box', style='filled', color='yellow')
+   family_tree.node('Variable2', label='X = 14', shape='box', style='filled', color='goldenrod')
+
+    # Define edges
+   family_tree.edge('Valor1', 'Valor2')
+   family_tree.edge('Valor2', 'Variable1', label='     asignación', color='black')
+   family_tree.edge('Variable1', 'Variable2', style='invis')
+
+   # Descripción general
+   st.write("""
+    <h2 style='text-align: justify;'>
+    Visual Studio Code (VS Code)
+    </h2>
+    """, unsafe_allow_html=True)
+   
+    # Display text block
+   content_3 = st_monaco(
+        value="# Creamos dos variables y le asignamos un valor a cada una\n perro = 'guau'\n X = 14 \n print(perro)\n print(X)",
+        height="100px",
+        language="python",
+        lineNumbers=True,
+        minimap=False,
+        theme="vs-dark",)
+   if st.button("▶️"):
+        if "perro = 'guau'\n X = 14 \n print(perro)\n print(X)" in content_3:
+            st.markdown("guau")
+            st.markdown("14")
+        else:
+            st.markdown(f"**SyntaxError o NameError:** Parece que escribiste algo incorrecto. Asegúrate de usar `print()` e ingresar el nombre de la variable que deseas imprimir.")
+    
+    # Descripción general
+   st.write("""
+    <h2 style='text-align: justify;'>
+    Google Colab
+    </h2>
+    """, unsafe_allow_html=True)
+       # Bloque de texto en un box
+   st.markdown(
+    """
+    <div style="
+        padding: 10px;
+        background-color: #fefefb;
+        font-weight: bold;
+        font-size: 18px;">
+        Variables
+    </div>
+    """,
+    unsafe_allow_html=True,
+    )
+    # Bloque de código con comentario explicativo
+   codigo_2 = """# La función print() imprime el valor asignado a una variable 
+   perro = 'guau'
+   X = 14
+   print(perro)
+   print(X)"""
+
+   # Mostrar código en bloque con resaltado de sintaxis
+   content_4 = st_monaco(
+        value=codigo_2,
+        height="120px",
+        language="python",
+        lineNumbers=True,
+        minimap=False,
+        theme="jupyter",)
+
+    # lista de palabras clave
+   frases = ["perro = 'guau'", "X = 14", "print(perro)", "print(X)"]
+    # Display both code blocks together
+   if st.button("▶️", key="run_button"):
+        if all(palabra in content_4 for palabra in frases):
+            st.markdown("guau")
+            st.markdown("14")
+        else:
+            st.markdown(f"**SyntaxError o NameError:** Parece que escribiste algo incorrecto. Recuerda que en los notebooks puedes mostrar el contenido de la variable con la función 'print()' o simplemente escribiendo el nombre de la variable.")
+
+     # Encabezado
+   st.markdown(f'<h2 style="font-size: 30px; text-align: center; ">¿Qué está ocurriendo aquí?</h2>', unsafe_allow_html=True)
+
+    # Display the graph in Streamlit
+   st.write("En Python, una variable es un espacio que almacena un valor. Para asignar un valor a una variable, usamos el símbolo `=`. Por ejemplo, `X = 14` asigna el valor `14` a la variable `X`. "
+    "Recuerda que el nombre de la variable puede ser cualquier palabra, pero no puede comenzar con un número. "
+    "Además, no puede contener espacios ni caracteres especiales. "
+    "Revisa las palabras reservadas de Python para asegurarte de que el nombre de tu variable no sea una palabra reservada: "
+    "[Palabras reservadas en Python.](https://www.w3schools.com/python/python_ref_keywords.asp) "
+    "Los valores pueden ser números, cadenas de texto, listas, etc.")
+   
+      # Center the graph using columns
+   col1, col2, col3 = st.columns([1, 2, 1])  # Adjust column widths as needed
+   with col1:
+       st.empty()  # Empty column for alignment
+   with col2:
+       st.graphviz_chart(family_tree)  # Graph displayed in the center column
+   with col3:
+       st.empty()  # Empty column for alignment
+
+
+if opciones == "Tipos de datos":
+   st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Tipos de datos en Python</h2>', unsafe_allow_html=True)
+   st.write("Por Luisa Gomez (luisa.gomez@pucp.edu.pe)")
+
+    # Crear el gráfico
+   data_types_graph = graphviz.Digraph('data_types')
+
+    # Configuración global
+   data_types_graph.attr(rankdir='TB', fontsize='12')
+   data_types_graph.attr('node', fontname="Arial", fontsize='12', shape='box', style='filled', fillcolor='lightgray')
+   data_types_graph.attr('edge', color='gray')
+
+    # Definir nodos con colores diferenciados
+   data_types_graph.node('Texto', label='Texto', color='firebrick2')
+   data_types_graph.node('Números', label='Números', color='purple')
+   data_types_graph.node('Booleanos', label='Boolean\n(bool)\n booleanos', color='deeppink')
+
+   data_types_graph.node('String', label='String \n(str)\n cadena de caracteres', color='crimson')
+   data_types_graph.node('Int', label='Interger\n(int)\n número entero', color='blue')
+   data_types_graph.node('Float', label='Float\n(float)\n número decimal', color='blue')
+
+   data_types_graph.node('True', label='True', color='coral')
+   data_types_graph.node('False', label='False', color='coral')
+
+   data_types_graph.node('cadena1', label='"¡Hola Mundo!"', color='red')
+   data_types_graph.node('cadena2', label='"2025"', color='red')
+   data_types_graph.node('cadena3', label='"@gmail.com"', color='red')
+
+   data_types_graph.node('entero', label='7', color='cyan')
+   data_types_graph.node('decimal', label='3.14', color='darkolivegreen1')
+    # Define edges
+   data_types_graph.edge('Texto', 'String')
+   data_types_graph.edge('Números', 'Int')
+   data_types_graph.edge('Números', 'Float')
+   data_types_graph.edge('Booleanos', 'True')
+   data_types_graph.edge('Booleanos', 'False')
+
+   data_types_graph.edge('String', 'cadena1')
+   data_types_graph.edge('String', 'cadena2')
+   data_types_graph.edge('String', 'cadena3')
+
+   data_types_graph.edge('Int', 'entero')
+   data_types_graph.edge('Float', 'decimal')
+
+    # Mostrar en Streamlit
+   st.graphviz_chart(data_types_graph)
+
+# Breve explicación de los tipos de datos
+   st.write("""
+    - **String (str)**: Son cadenas de caracteres que contienen letras, números y símbolos. En una conversión solo los caracteres numéricos se convierten en integer o float.
+    - **Integer (int)**: Son números enteros, como `7` o `-3`. Estos pueden convertirse a float, pero no al revés. 
+    - **Float (float)**: Son números decimales, como `3.14` o `-0.5`. Estos pueden convertirse a int, pero se pierde la parte decimal.
+    - **Boolean (bool)**: Valores de verdad, que pueden ser `True` o `False`. Estos son útiles para condiciones y comparaciones.
+    """, unsafe_allow_html=True)
+
+
+if opciones == "Operadores aritméticos":
+   st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Operadores aritméticos en Python</h2>', unsafe_allow_html=True)
+   st.write("Por Luisa Gomez (luisa.gomez@pucp.edu.pe)")
