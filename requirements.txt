@@ -1,1 +1,3 @@
 streamlit-monaco
+pandas
+graphviz
