@@ -325,8 +325,83 @@ if opciones == "Tipos de datos":
     - **Float (float)**: Son números decimales, como `3.14` o `-0.5`. Estos pueden convertirse a int, pero se pierde la parte decimal.
     - **Boolean (bool)**: Valores de verdad, que pueden ser `True` o `False`. Estos son útiles para condiciones y comparaciones.
     """, unsafe_allow_html=True)
+# Ejemplos de cada tipo de dato con variables
+   st.markdown(f'<h3 style="font-size: 30px; text-align: center; ">Ejemplos de tipos de datos</h3>', unsafe_allow_html=True)
+
+   codigo_3 = """
+    # Variables de diferentes tipos de datos
+    curso = "Python"  # Cadena de caracteres (str)
+    ciclo = 2025         # Número entero (int)
+    crédito = 3.5         # Número decimal (float)
+
+    # Imprimir los tipos de datos
+    print("Tipo de dato de curso:", type(curso))
+    print("Tipo de dato de ciclo:", type(ciclo))
+    print("Tipo de dato de crédito:", type(crédito))
+    """
+    # Mostrar el código en un bloque con resaltado de sintaxis
+   st.code(codigo_3, language='python')
 
 
 if opciones == "Operadores aritméticos":
    st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Operadores aritméticos en Python</h2>', unsafe_allow_html=True)
    st.write("Por Luisa Gomez (luisa.gomez@pucp.edu.pe)")
+
+# Breve explicación de los operadores en una tabla con Streamlit
+
+    # Crear un diccionario con los operadores y su descripción
+   operadores = {
+         "Operador": ["+", "-", "*", "/", "//", "%", "**"],
+         "Descripción": [
+              "Suma",
+              "Resta",
+              "Multiplicación",
+              "División",
+              "División entera",
+              "Módulo (resto de la división)",
+              "Potencia"
+         ]
+    }
+    
+    # Convertir a DataFrame
+   df_operadores = pd.DataFrame(operadores)
+    
+    # Mostrar en Streamlit
+   st.dataframe(df_operadores)
+
+# Agregar ejemplos con variables
+   st.markdown(f'<h3 style="font-size: 30px; text-align: center; ">Ejemplos con variables</h3>', unsafe_allow_html=True)
+
+# Código de ejemplo
+   codigo_4 = """
+    # Variables de diferentes tipos
+    nombre = "Liam"  # Variable de tipo str
+    apellido = "Payne"  # Variable de tipo str
+
+    edad = 25         # Variable de tipo int
+
+    altura = 1.68     # Variable de tipo float
+
+    # Operaciones con variables
+    suma = edad + 5           # Suma
+    multiplicacion = altura * 2  # Multiplicación
+    nombre_completo = nombre + apellido  # Concatenación de strings
+
+    # Imprimir resultados
+    print("Suma:", suma)
+    print("Multiplicación:", multiplicacion)
+    print("Usuario:", nombre_completo)
+    """
+
+# Mostrar el código en un bloque con resaltado de sintaxis
+   st.code(codigo_4, language='python')
+
+# Explicación del ejemplo
+   st.write("""
+    En este ejemplo:
+    - `nombre` y `apellido` son variables del tipo **str** que almacenan una cadena de caracteres cada una.
+    - `edad` es una variable de tipo **int** que almacena un número entero.
+    - `altura` es una variable de tipo **float** que almacena un número decimal.
+    - Se realizan operaciones aritméticas como suma y multiplicación con las variables `edad` y `altura`.
+    - Se realiza una concatenación de cadenas con las variables `nombre` y `apellido`.
+    """)
