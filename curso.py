@@ -7,7 +7,7 @@ import graphviz
 
 st.sidebar.title("Pensamiento Computacional")
 opciones = st.sidebar.selectbox("Selecciona la clase que deseas ver:",["Mi primer programa en Python", 
-            "Variables", "Tipos de datos", "Operadores aritméticos"] )
+            "Variables", "Tipos de datos", "Operadores aritméticos", "Listas", "Expresiones booleanas"] )
 
 if opciones == "Mi primer programa en Python":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Mi primer programa en Python</h2>', unsafe_allow_html=True)
@@ -370,7 +370,7 @@ if opciones == "Operadores aritméticos":
    st.dataframe(df_operadores)
 
 # Agregar ejemplos con variables
-   st.markdown(f'<h3 style="font-size: 30px; text-align: center; ">Ejemplos con variables</h3>', unsafe_allow_html=True)
+   st.markdown(f'<h3 style="font-size: 30px; text-align: center; ">Ejemplos con operadores aritméticos</h3>', unsafe_allow_html=True)
 
 # Código de ejemplo
    codigo_4 = """
@@ -405,3 +405,133 @@ if opciones == "Operadores aritméticos":
     - Se realizan operaciones aritméticas como suma y multiplicación con las variables `edad` y `altura`.
     - Se realiza una concatenación de cadenas con las variables `nombre` y `apellido`.
     """)
+   
+if opciones == "Listas":
+   st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Listas</h2>', unsafe_allow_html=True)
+   st.write("Por Luisa Gomez (luisa.gomez@pucp.edu.pe)")
+
+   st.code("comunicaciones = ['comunicación audiovisual', 'periodismo', 'comunicación para el desarrollo', 'publicidad'] \nprint(comunicaciones)", language='python')
+# Breve explicación de las listas
+   st.write("""
+     Las listas son estructuras de datos que permiten almacenar múltiples elementos en una sola variable. 
+     Se definen utilizando corchetes `[]` y los elementos se separan por comas. 
+     Las listas pueden contener diferentes tipos de datos, como números, cadenas de texto y otras listas.
+     """, unsafe_allow_html=True)
+   
+# Ejemplo de lista en formato código
+   st.markdown(f'<h3 style="font-size: 30px; text-align: center; ">Ejemplo de lista</h3>', unsafe_allow_html=True)
+   
+   codigo_5 = """
+# Definición de una lista
+frutas = ["manzana", "banana", "naranja", "uva"]
+
+# Acceder a elementos de la lista
+print("Primera fruta:", frutas[0])  # Accede al primer elemento
+print("Última fruta:", frutas[-1])  # Accede al último elemento
+
+# Modificar un elemento de la lista
+frutas[1] = "pera"
+print("Lista modificada:", frutas)
+
+# Agregar un nuevo elemento a la lista
+frutas.append("mango")
+print("Lista después de agregar un elemento:", frutas)
+
+# Eliminar un elemento de la lista
+frutas.remove("naranja")
+print("Lista después de eliminar un elemento:", frutas)
+   """
+
+   # Mostrar el código en un bloque con resaltado de sintaxis
+   st.code(codigo_5, language='python')
+
+   # Explicación del ejemplo
+   st.write("""
+   En este ejemplo:
+   - Se define una lista llamada `frutas` que contiene cuatro elementos.
+   - Se accede a elementos específicos de la lista utilizando índices.
+   - Se modifica un elemento de la lista reemplazando `"banana"` por `"pera"`.
+   - Se agrega un nuevo elemento `"mango"` al final de la lista utilizando el método `append()`.
+   - Se elimina el elemento `"naranja"` de la lista utilizando el método `remove()`.
+   """)
+
+
+if opciones == "Expresiones booleanas":
+   st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Expresiones booleanas en Python</h2>', unsafe_allow_html=True)
+   st.write("Por Luisa Gomez (luisa.gomez@pucp.edu.pe)")
+# Breve explicación de las expresiones booleanas
+   st.write("""
+     Las expresiones booleanas son expresiones que pueden ser verdaderas (`True`) o falsas (`False`). 
+     Se utilizan en condiciones y comparaciones para tomar decisiones en el código. 
+     En Python, las expresiones booleanas se evaluan con operadores comparativos, de pertenencia y lógicos.
+     """, unsafe_allow_html=True)
+
+   st.markdown(f'<h3 style="font-size: 42px; text-align: center; ">Operadores comparativos</h3>', unsafe_allow_html=True)
+# Crear tablas de cada tipo de operadores
+   operadores_comparativos = {
+       "Operador": ["==", "!=", ">", "<", ">=", "<="],
+       "Descripción": [
+           "Igual a",
+           "Distinto de",
+           "Mayor que",
+           "Menor que",
+           "Mayor o igual que",
+           "Menor o igual que"
+       ],        
+       "Ejemplo": [
+            "5 == 5",
+            "5 != 3",  
+            "7 > 3",   
+            "3 < 7",  
+            "3 >= 5",  
+            "3 <= 5"  
+        ]
+    }
+   
+   # Convertir a DataFrame
+   df_operadores_comparativos = pd.DataFrame(operadores_comparativos)
+   
+   # Mostrar en Streamlit
+   st.dataframe(df_operadores_comparativos)
+   
+   st.markdown(f'<h3 style="font-size: 42px; text-align: center; ">Operadores de pertenencia</h3>', unsafe_allow_html=True)
+# Crear tablas de cada tipo de operadores
+   operadores_pertenencia = {
+         "Operador": ["in", "not in"],
+         "Descripción": [
+              "Verifica si un elemento está presente en una lista o cadena",
+              "Verifica si un elemento no está presente en una lista o cadena"
+         ],        
+         "Ejemplo": [
+                "'a' in 'manzana'",
+                "'b' not in 'manzana'"
+          ]
+     }
+    
+    # Convertir a DataFrame
+   df_operadores_pertenencia = pd.DataFrame(operadores_pertenencia)
+    
+    # Mostrar en Streamlit
+   st.dataframe(df_operadores_pertenencia)
+    
+   st.markdown(f'<h3 style="font-size: 42px; text-align: center; ">Operadores lógicos</h3>', unsafe_allow_html=True)
+# Crear tablas de cada tipo de operadores
+   operadores_logicos = {
+            "Operador": ["and", "or", "not"],
+            "Descripción": [
+                  "Devuelve True si ambas expresiones son verdaderas",
+                  "Devuelve True si al menos una expresión es verdadera",
+                  "Devuelve True si la expresión es falsa"
+            ],        
+            "Ejemplo": [
+                 "(5 > 3) and (7 > 5)",
+                 "(5 > 3) or (7 < 5)",
+                 "not(5 > 3)"
+             ]
+      }
+     
+     # Convertir a DataFrame
+   df_operadores_logicos = pd.DataFrame(operadores_logicos)
+     
+     # Mostrar en Streamlit
+   st.dataframe(df_operadores_logicos)
