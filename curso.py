@@ -7,7 +7,7 @@ import graphviz
 
 st.sidebar.title("Pensamiento Computacional")
 opciones = st.sidebar.selectbox("Selecciona la clase que deseas ver:",["Mi primer programa en Python", 
-            "Variables", "Tipos de datos", "Operadores aritméticos", "Listas", "Expresiones booleanas"] )
+            "Variables", "Tipos de datos", "Operadores aritméticos", "Cadena de caracteres", "Listas", "Expresiones booleanas", "Declaraciones condicionales"] )
 
 if opciones == "Mi primer programa en Python":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Mi primer programa en Python</h2>', unsafe_allow_html=True)
@@ -405,9 +405,58 @@ if opciones == "Operadores aritméticos":
     - Se realizan operaciones aritméticas como suma y multiplicación con las variables `edad` y `altura`.
     - Se realiza una concatenación de cadenas con las variables `nombre` y `apellido`.
     """)
-   
+
+if opciones == "Cadena de caracteres":
+   st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Cadena de caracteres (str)</h2>', unsafe_allow_html=True)
+   st.write("Por Luisa Gomez (luisa.gomez@pucp.edu.pe)")
+
+   st.code("texto = 'El 22 de febrero se nos anunció que regresaríamos a Colombia.' \nprint(texto)", language='python')
+
+# Ejemplos de algunos métodos de cadenas de caracteres
+   st.markdown(f'<h3 style="font-size: 30px; text-align: center; ">Ejemplos de métodos con cadenas de caracteres</h3>', unsafe_allow_html=True)
+   codigo_5 = """
+# Definición de una cadena de caracteres
+texto = "El 22 de febrero se nos anunció que regresaríamos a Colombia."
+print("Texto original:", texto)   
+
+# Convertir a mayúsculas
+texto_mayusculas = texto.upper()
+print("Texto en mayúsculas:", texto_mayusculas)
+
+# Convertir a minúsculas
+texto_minusculas = texto.lower()
+print("Texto en minúsculas:", texto_minusculas)
+
+# Contar la cantidad de caracteres
+cantidad_caracteres = len(texto)
+print("Cantidad de caracteres:", cantidad_caracteres)
+
+# Contar la cantidad de veces que aparece una palabra
+cantidad_veces = texto.count("Colombia")
+print("Cantidad de veces que aparece 'Colombia':", cantidad_veces)
+
+# Reemplazar una palabra por otra
+cambio_texto = texto.replace("Colombia", "Perú")
+print("Texto después de reemplazar 'Colombia' por 'Perú':", cambio_texto)
+
+# Convertir a una lista de palabras
+lista_palabras = texto.split()
+print("Lista de palabras:", lista_palabras)
+
+# Verificar si empieza con un caractero o palabra específica
+empieza_con = texto.startswith("El")
+print("¿Empieza con 'El'?:", empieza_con)
+
+# Verificar si termina con un caractero o palabra específica
+termina_con = texto.endswith("Colombia.")
+print("¿Termina con 'Colombia.'?:", termina_con)
+    """
+    # Mostrar el código en un bloque con resaltado de sintaxis
+   st.code(codigo_5, language='python')
+    
+
 if opciones == "Listas":
-   st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Listas</h2>', unsafe_allow_html=True)
+   st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Listas (list)</h2>', unsafe_allow_html=True)
    st.write("Por Luisa Gomez (luisa.gomez@pucp.edu.pe)")
 
    st.code("comunicaciones = ['comunicación audiovisual', 'periodismo', 'comunicación para el desarrollo', 'publicidad'] \nprint(comunicaciones)", language='python')
@@ -419,9 +468,9 @@ if opciones == "Listas":
      """, unsafe_allow_html=True)
    
 # Ejemplo de lista en formato código
-   st.markdown(f'<h3 style="font-size: 30px; text-align: center; ">Ejemplo de lista</h3>', unsafe_allow_html=True)
+   st.markdown(f'<h3 style="font-size: 30px; text-align: center; ">Ejemplo de métodos con listas</h3>', unsafe_allow_html=True)
    
-   codigo_5 = """
+   codigo_6 = """
 # Definición de una lista
 frutas = ["manzana", "banana", "naranja", "uva"]
 
@@ -433,6 +482,9 @@ print("Última fruta:", frutas[-1])  # Accede al último elemento
 frutas[1] = "pera"
 print("Lista modificada:", frutas)
 
+# Acceder al indice de un elemento
+print("Índice de 'naranja':", frutas.index("naranja"))
+
 # Agregar un nuevo elemento a la lista
 frutas.append("mango")
 print("Lista después de agregar un elemento:", frutas)
@@ -440,10 +492,31 @@ print("Lista después de agregar un elemento:", frutas)
 # Eliminar un elemento de la lista
 frutas.remove("naranja")
 print("Lista después de eliminar un elemento:", frutas)
+
+# Ordenar los elementos de una lista 
+numeros = [5, 2, 9, 1, 7]
+numeros.sort()
+print("Lista ordenada:", numeros)
+
+# Ordenar de manera inversa 
+numeros.sort(reverse=True)
+print("Lista ordenada de manera inversa:", numeros)
+
+# Crear una lista vacía
+lista_vacia = []
+print("Lista vacía:", lista_vacia)
+
+lista_vacia_2 = list()
+print("Lista vacía 2:", lista_vacia_2)
+
+# Contar la cantidad de elementos en una lista
+cantidad_elementos = len(frutas)
+print("Cantidad de elementos en la lista:", cantidad_elementos)
+
    """
 
    # Mostrar el código en un bloque con resaltado de sintaxis
-   st.code(codigo_5, language='python')
+   st.code(codigo_6, language='python')
 
    # Explicación del ejemplo
    st.write("""
@@ -535,3 +608,68 @@ if opciones == "Expresiones booleanas":
      
      # Mostrar en Streamlit
    st.dataframe(df_operadores_logicos)
+
+if opciones == "Declaraciones condicionales":
+   st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Declaraciones condicionales (if-elif-else)</h2>', unsafe_allow_html=True)
+   st.write("Por Luisa Gomez (luisa.gomez@pucp.edu.pe)")
+
+   # Breve explicación de las declaraciones condicionales
+   st.write("""
+        Las declaraciones condicionales permiten ejecutar diferentes bloques de código según si una condición es verdadera o falsa.
+        En Python, se utilizan las palabras clave `if`, `elif` y `else` para crear estas estructuras de control.
+        """, unsafe_allow_html=True)
+   
+   st.markdown(f'<h3 style="font-size: 42px; text-align: center; ">Estructura básica</h3>', unsafe_allow_html=True)
+   # Crear tablas de cada tipo de operadores
+   estructura_basica = {
+            "Palabra clave": ["if", "elif", "else"],
+            "Descripción": [
+                  "Evalúa una condición y ejecuta el bloque de código si es verdadera",
+                  "Evalúa una condición alternativa si la anterior es falsa",
+                  "Ejecuta el bloque de código si todas las condiciones anteriores son falsas"
+            ],        
+            "Ejemplo": [
+                 "if x > 5:",
+                 "elif x == 5:",
+                 "else:"
+             ]
+      }
+     
+     # Convertir a DataFrame
+   df_estructura_basica = pd.DataFrame(estructura_basica)
+         
+    # Mostrar en Streamlit     
+   st.dataframe(df_estructura_basica)
+
+   # Ejemplo de declaración condicional
+   st.markdown(f'<h3 style="font-size: 42px; text-align: center; ">Ejemplo de declaración condicional</h3>', unsafe_allow_html=True)
+    # Código de ejemplo
+   codigo_7 = """
+# Definición de una variable
+edad = 18
+
+# Declaración condicional
+if edad < 18:
+    print("Eres menor de edad.")
+elif edad == 18:
+    print("Tienes 18 años.")
+else:
+    print("Eres mayor de edad.")
+   """
+   # Mostrar el código en un bloque con resaltado de sintaxis
+   st.code(codigo_7, language='python')
+
+   # Explicación del ejemplo
+   st.write("""
+   En este ejemplo:
+   - Se define una variable llamada `edad`.
+   - Se utiliza una declaración condicional para verificar si la edad es menor, igual o mayor a 18.
+   - Dependiendo del resultado, se imprime un mensaje diferente.
+   """)
+
+
+   
+   
+   
+
+
