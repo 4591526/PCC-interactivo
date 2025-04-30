@@ -835,7 +835,7 @@ if opciones == "Librerías":
     compré las leyendas mitológicas griegas y romanas. ¡Fantástico!
     Enseguida vino Lies y partimos juntas a la escuela. Comencé
     siguiendo el ritual holandés de obsequiar golosinas a mis maestros
-    y compañeros de clase y luego nos pusimos a trabajar.
+    y compañeros de clase y luego nos pusimos a trabajar."
 
     texto_minusculas = texto.lower()
     texto_depurado = texto_minusculas.replace(",", "").replace(".", "").replace(":", "").replace(";", "").replace("¿", "").replace("¡", "").replace("!", "").replace("?", "").replace("«", "").replace("»", "").replace("/n", "").replace("-", "").replace("_", "")
