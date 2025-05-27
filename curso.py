@@ -8,7 +8,7 @@ import graphviz
 st.sidebar.title("Pensamiento Computacional")
 opciones = st.sidebar.selectbox("Selecciona la clase que deseas ver:",["Mi primer programa en Python", 
             "Variables", "Tipos de datos", "Operadores aritméticos", "Cadena de caracteres", "Listas", 
-            "Expresiones booleanas", "Declaraciones condicionales", "Bucles", "Diccionrios", "Librerías", "Abrir archivos"] )
+            "Expresiones booleanas", "Declaraciones condicionales", "Bucles", "Diccionarios", "Librerías", "Abrir archivos"] )
 
 if opciones == "Mi primer programa en Python":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Mi primer programa en Python</h2>', unsafe_allow_html=True)
