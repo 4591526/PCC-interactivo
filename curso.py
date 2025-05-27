@@ -8,7 +8,7 @@ import graphviz
 st.sidebar.title("Pensamiento Computacional")
 opciones = st.sidebar.selectbox("Selecciona la clase que deseas ver:",["Mi primer programa en Python", 
             "Variables", "Tipos de datos", "Operadores aritméticos", "Cadena de caracteres", "Listas", 
-            "Expresiones booleanas", "Declaraciones condicionales", "Bucles", "Librerías", "Abrir archivos"] )
+            "Expresiones booleanas", "Declaraciones condicionales", "Bucles", "Diccionrios", "Librerías", "Abrir archivos"] )
 
 if opciones == "Mi primer programa en Python":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Mi primer programa en Python</h2>', unsafe_allow_html=True)
@@ -749,6 +749,93 @@ if opciones == "Bucles":
     - En cada iteración, se incrementa el contador en 1.
     """)
 
+    # Funciones de control de bucles: break y continue
+    st.markdown(f'<h3 style="font-size: 42px; text-align: center; ">Funciones de control de bucles</h3>', unsafe_allow_html=True)
+    st.write("""
+    Las funciones `break` y `continue` se utilizan para controlar el flujo de los bucles:
+    - `break`: Termina el bucle inmediatamente.
+    - `continue`: Salta a la siguiente iteración del bucle.
+    """, unsafe_allow_html=True)
+
+    # Ejemplo de uso de break y continue
+    st.markdown(f'<h3 style="font-size: 42px; text-align: center; ">Ejemplo de uso de break y continue</h3>', unsafe_allow_html=True)
+    # Código de ejemplo
+    codigo_10 = """
+    # Bucle for con break y continue
+    for i in range(10):
+        if i == 5:
+            print("Se encontró el número 5, saliendo del bucle.")
+            break  # Termina el bucle si i es igual a 5
+        if i % 2 == 0:
+            print("Número par:", i)
+        else:
+            print("Número impar:", i)
+    """
+    # Mostrar el código en un bloque con resaltado de sintaxis
+    st.code(codigo_10, language='python')
+    # Explicación del ejemplo
+    st.write("""
+    En este ejemplo:
+    - Se utiliza un bucle `for` para iterar sobre los números del 0 al 9.
+    - Si el número es igual a 5, se imprime un mensaje y se utiliza `break` para salir del bucle.
+    - Si el número es par, se imprime un mensaje indicando que es par.
+    - Si el número es impar, se imprime un mensaje indicando que es impar.
+    """)
+
+if opciones == "Diccionarios":
+    st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Diccionarios de Python</h2>', unsafe_allow_html=True)
+    st.write("Por Luisa Gomez (luisa.gomez@pucp.edu.pe)")    
+
+    # Breve explicación de los diccionarios
+    st.write("""
+    Los diccionarios son estructuras de datos que almacenan pares clave-valor.
+    Se definen utilizando llaves `{}` y cada par se separa por comas.
+    Los diccionarios son útiles para almacenar datos relacionados y acceder a ellos de manera eficiente.
+    """, unsafe_allow_html=True)
+
+    # Ejemplo de diccionario en formato código
+    st.markdown(f'<h3 style="font-size: 42px; text-align: center; ">Ejemplo de diccionario</h3>', unsafe_allow_html=True)
+    codigo_11 = """
+    # Definición de un diccionario
+    estudiante = {
+        "nombre": "Liam",
+        "apellido": "Payne",
+        "edad": 25,
+        "cursos": ["Python", "Java", "C++"]
+    }
+    # Acceder a valores del diccionario
+    print("Nombre:", estudiante["nombre"])
+    print("Apellido:", estudiante["apellido"])
+    print("Edad:", estudiante["edad"])
+    print("Cursos:", estudiante["cursos"])
+
+    # Modificar un valor del diccionario
+    estudiante["edad"] = 26
+    print("Edad modificada:", estudiante["edad"])
+
+    # Agregar un nuevo par clave-valor
+    estudiante["universidad"] = "PUCP"
+    print("Universidad:", estudiante["universidad"])
+
+    # Verificar si una clave existe en el diccionario
+    existe_nombre = "nombre" in estudiante
+    print("¿Existe la clave 'nombre'?:", existe_nombre)
+
+    # Obtener todas las claves del diccionario
+    claves = estudiante.keys()
+    print("Claves del diccionario:", claves)
+
+    # Obtener todos los valores del diccionario
+    valores = estudiante.values()
+    print("Valores del diccionario:", valores)
+
+    
+    """
+    # Mostrar el código en un bloque con resaltado de sintaxis
+    st.code(codigo_11, language='python')
+    
+    
+
 if opciones == "Librerías":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Librerías de Python</h2>', unsafe_allow_html=True)
     st.write("Por Luisa Gomez (luisa.gomez@pucp.edu.pe)")
@@ -785,12 +872,6 @@ if opciones == "Librerías":
     # Mostrar el código en un bloque con resaltado de sintaxis
     st.code(codigo_10, language='python')
 
-    # Instrucciones break y continue
-    st.write("""
-    Las instrucciones `break` y `continue` se utilizan para controlar el flujo de los bucles.
-    - `break`: Termina el bucle inmediatamente.
-    - `continue`: Salta a la siguiente iteración del bucle.
-    """, unsafe_allow_html=True)
 
     # Uso de range()
     st.write("""
