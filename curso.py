@@ -190,25 +190,8 @@ if opciones == "Variables":
     st.write("Por Luisa Gomez (luisa.gomez@pucp.edu.pe)")
     
     st.code("perro = 'guau' \nprint(perro)", language='python')
-
-        # Create the family tree graph
-    family_tree = graphviz.Digraph('family_tree')
-
-        # Set global attributes
-    family_tree.attr(rankdir='TB')  # Top-to-bottom alignment
-    family_tree.attr('edge', color='gray')
-
-        # Define nodes
-    family_tree.node('Valor1', label='14', shape='circle', style='filled', color='orange')
-    family_tree.node('Valor2', label='14', shape='circle', style='filled', color='orange')
-
-    family_tree.node('Variable1', label='Variable\nX', shape='box', style='filled', color='yellow')
-    family_tree.node('Variable2', label='X = 14', shape='box', style='filled', color='goldenrod')
-
-        # Define edges
-    family_tree.edge('Valor1', 'Valor2')
-    family_tree.edge('Valor2', 'Variable1', label='     asignación', color='black')
-    family_tree.edge('Variable1', 'Variable2', style='invis')
+    # Insertar vido
+    # st.video()
 
     # Descripción general
     st.write("""
@@ -1015,5 +998,6 @@ if opciones == "Abrir archivos":
    
    
    
+
 
 
