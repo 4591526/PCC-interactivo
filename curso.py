@@ -271,14 +271,6 @@ if opciones == "Variables":
         "[Palabras reservadas en Python.](https://www.w3schools.com/python/python_ref_keywords.asp) "
         "Los valores pueden ser números, cadenas de texto, listas, etc.")
     
-      # Center the graph using columns
-    col1, col2, col3 = st.columns([1, 2, 1])  # Adjust column widths as needed
-    with col1:
-        st.empty()  # Empty column for alignment
-    with col2:
-        st.graphviz_chart(family_tree)  # Graph displayed in the center column
-    with col3:
-        st.empty()  # Empty column for alignment
 
 
 if opciones == "Tipos de datos":
@@ -998,6 +990,7 @@ if opciones == "Abrir archivos":
    
    
    
+
 
 
 
