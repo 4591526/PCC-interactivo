@@ -189,89 +189,41 @@ if opciones == "Variables":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Variables en Python</h2>', unsafe_allow_html=True)
     st.write("Por Luisa Gomez (luisa.gomez@pucp.edu.pe)")
     
-    st.code("perro = 'guau' \nprint(perro)", language='python')
     # Insertar vido
-    # st.video()
+    st.video("https://youtu.be/wDqPp41z90E")
 
-    # Descripción general
-    st.write("""
-        <h2 style='text-align: justify;'>
-        Visual Studio Code (VS Code)
-        </h2>
-        """, unsafe_allow_html=True)
-   
-    # Display text block
-    content_3 = st_monaco(
-            value="# Creamos dos variables y le asignamos un valor a cada una\n perro = 'guau'\n X = 14 \n print(perro)\n print(X)",
-            height="100px",
-            language="python",
-            lineNumbers=True,
-            minimap=False,
-            theme="vs-dark",)
-    if st.button("▶️"):
-            if "perro = 'guau'\n X = 14 \n print(perro)\n print(X)" in content_3:
-                st.markdown("guau")
-                st.markdown("14")
-            else:
-                st.markdown(f"**SyntaxError o NameError:** Parece que escribiste algo incorrecto. Asegúrate de usar `print()` e ingresar el nombre de la variable que deseas imprimir.")
-        
-    # Descripción general
-    st.write("""
-        <h2 style='text-align: justify;'>
-        Google Colab
-        </h2>
-        """, unsafe_allow_html=True)
-        # Bloque de texto en un box
-    st.markdown(
-        """
-        <div style="
-            padding: 10px;
-            background-color: #fefefb;
-            font-weight: bold;
-            font-size: 18px;">
-            Variables
-        </div>
-        """,
-        unsafe_allow_html=True,
-        )
-        # Bloque de código con comentario explicativo
-    codigo_2 = """# La función print() imprime el valor asignado a una variable 
-    perro = 'guau'
-    X = 14
+    # Ejemplos de creación de variables
+    st.markdown(f'<h3 style="font-size: 30px; text-align: center; ">Ejemplos de variables</h3>', unsafe_allow_html=True)
+
+    codigo_13 = """
+    # Sintaxis: nombre_variable = valor
+    # nombre_variable es la etiqueta
+    # = es la asignación
+    # valor es cualquier tipo de dato de Python
+
+    # Creamos una variable sin error de nombre
+    perro = "guau"
     print(perro)
-    print(X)"""
 
-    # Mostrar código en bloque con resaltado de sintaxis
-    content_4 = st_monaco(
-            value=codigo_2,
-            height="120px",
-            language="python",
-            lineNumbers=True,
-            minimap=False,
-            theme="jupyter",)
+    # Error de nombre: antes de ejecutar el nombre de una posible variable 
+    # debes crearla y asignarle un valor
+    print(gato)
 
-        # lista de palabras clave
-    frases = ["perro = 'guau'", "X = 14", "print(perro)", "print(X)"]
-        # Display both code blocks together
-    if st.button("▶️", key="run_button"):
-            if all(palabra in content_4 for palabra in frases):
-                st.markdown("guau")
-                st.markdown("14")
-            else:
-                st.markdown(f"**SyntaxError o NameError:** Parece que escribiste algo incorrecto. Recuerda que en los notebooks puedes mostrar el contenido de la variable con la función 'print()' o simplemente escribiendo el nombre de la variable.")
+    # ¿Cuál sería el valor de la variable perro "guau" o "sonido de perro"?
+    perro = "sonido del perro"
+    print(perro) 
+    # Las variables conservan el último valor asignado a la variable
+    """
+    st.code(codigo_13, language = 'python')
 
-        # Encabezado
-    st.markdown(f'<h2 style="font-size: 30px; text-align: center; ">¿Qué está ocurriendo aquí?</h2>', unsafe_allow_html=True)
-
-        # Display the graph in Streamlit
-    st.write("En Python, una variable es un espacio que almacena un valor. Para asignar un valor a una variable, usamos el símbolo `=`. Por ejemplo, `X = 14` asigna el valor `14` a la variable `X`. "
-        "Recuerda que el nombre de la variable puede ser cualquier palabra, pero no puede comenzar con un número. "
-        "Además, no puede contener espacios ni caracteres especiales. "
-        "Revisa las palabras reservadas de Python para asegurarte de que el nombre de tu variable no sea una palabra reservada: "
-        "[Palabras reservadas en Python.](https://www.w3schools.com/python/python_ref_keywords.asp) "
-        "Los valores pueden ser números, cadenas de texto, listas, etc.")
-    
-
+    # Display the graph in Streamlit
+    st.write("""
+        En Python, una variable es un espacio que almacena un valor. Para asignar un valor a una variable, usamos el símbolo `=`. 
+        Por ejemplo, `numero = 14` asigna el valor `14` a la variable `numero`. Recuerda que el nombre de la variable puede ser cualquier palabra, pero no puede comenzar con un número. 
+        Además, no puede contener espacios ni caracteres especiales. Revisa las palabras reservadas de Python para asegurarte de que el nombre de tu variable no sea una palabra reservada: 
+        [Palabras reservadas en Python.](https://www.w3schools.com/python/python_ref_keywords.asp) 
+        Los valores pueden ser cadena de caracteres, enteros, flotantes, booleanos, listas, etc.
+        """, unsafe_allow_html=True)
 
 if opciones == "Tipos de datos":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Tipos de datos en Python</h2>', unsafe_allow_html=True)
