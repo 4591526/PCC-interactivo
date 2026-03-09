@@ -12,7 +12,6 @@ opciones = st.sidebar.selectbox("Selecciona la clase que deseas ver:",["Mi prime
 
 if opciones == "Mi primer código en Python":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Mi primer código en Python</h2>', unsafe_allow_html=True)
-    st.write("Por Luisa Gomez (luisa.gomez@pucp.edu.pe)")
 
     # Descripción de los editores de código: Visual Studio Code, Jupyter y Google Colaboratory
         
@@ -187,7 +186,6 @@ if opciones == "Mi primer código en Python":
 
 if opciones == "Variables":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Variables en Python</h2>', unsafe_allow_html=True)
-    st.write("Por Luisa Gomez (luisa.gomez@pucp.edu.pe)")
     
     # Insertar vido
     st.video("https://youtu.be/wDqPp41z90E")
@@ -227,7 +225,6 @@ if opciones == "Variables":
 
 if opciones == "Tipos de datos":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Tipos de datos en Python</h2>', unsafe_allow_html=True)
-    st.write("Por Luisa Gomez (luisa.gomez@pucp.edu.pe)")
 
         # Crear el gráfico
     data_types_graph = graphviz.Digraph('data_types')
@@ -299,7 +296,6 @@ if opciones == "Tipos de datos":
 
 if opciones == "Operadores aritméticos":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Operadores aritméticos en Python</h2>', unsafe_allow_html=True)
-    st.write("Por Luisa Gomez (luisa.gomez@pucp.edu.pe)")
 
     # Breve explicación de los operadores en una tabla con Streamlit
 
@@ -362,7 +358,7 @@ if opciones == "Operadores aritméticos":
 
 if opciones == "Cadena de caracteres":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Cadena de caracteres (str)</h2>', unsafe_allow_html=True)
-    st.write("Por Luisa Gomez (luisa.gomez@pucp.edu.pe)")
+
 
     st.code("texto = 'El 22 de febrero se nos anunció que regresaríamos a Colombia.' \nprint(texto)", language='python')
 
@@ -411,7 +407,6 @@ if opciones == "Cadena de caracteres":
 
 if opciones == "Listas":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Listas (list)</h2>', unsafe_allow_html=True)
-    st.write("Por Luisa Gomez (luisa.gomez@pucp.edu.pe)")
 
     st.code("comunicaciones = ['comunicación audiovisual', 'periodismo', 'comunicación para el desarrollo', 'publicidad'] \nprint(comunicaciones)", language='python')
     # Breve explicación de las listas
@@ -485,7 +480,7 @@ if opciones == "Listas":
 
 if opciones == "Expresiones booleanas":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Expresiones booleanas en Python</h2>', unsafe_allow_html=True)
-    st.write("Por Luisa Gomez (luisa.gomez@pucp.edu.pe)")
+            
     # Breve explicación de las expresiones booleanas
     st.write("""
         Las expresiones booleanas son expresiones que pueden ser verdaderas (`True`) o falsas (`False`). 
@@ -565,7 +560,6 @@ if opciones == "Expresiones booleanas":
 
 if opciones == "Declaraciones condicionales":
     st.markdown(f'<h2 style="font-size: 40px; text-align: center; ">Declaraciones condicionales: if-elif-else</h2>', unsafe_allow_html=True)
-    st.write("Por Luisa Gomez (luisa.gomez@pucp.edu.pe)")
 
     # Breve explicación de las declaraciones condicionales
     st.write("""
@@ -623,7 +617,6 @@ if opciones == "Declaraciones condicionales":
 
 if opciones == "Bucles":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Bucles for y while</h2>', unsafe_allow_html=True)
-    st.write("Por Luisa Gomez (luisa.gomez@pucp.edu.pe)")
 
     # Breve explicación de los bucles
     st.write("""
@@ -736,8 +729,7 @@ if opciones == "Bucles":
     """)
 
 if opciones == "Diccionarios":
-    st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Diccionarios de Python</h2>', unsafe_allow_html=True)
-    st.write("Por Luisa Gomez (luisa.gomez@pucp.edu.pe)")    
+    st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Diccionarios de Python</h2>', unsafe_allow_html=True) 
 
     # Breve explicación de los diccionarios
     st.write("""
@@ -791,7 +783,6 @@ if opciones == "Diccionarios":
 
 if opciones == "Librerías":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Librerías de Python</h2>', unsafe_allow_html=True)
-    st.write("Por Luisa Gomez (luisa.gomez@pucp.edu.pe)")
 
     # Breve explicación de las funciones
     st.write(""" 
@@ -899,7 +890,6 @@ if opciones == "Librerías":
 
 if opciones == "Abrir archivos":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Abrir archivos en Colab</h2>', unsafe_allow_html=True)
-    st.write("Por Luisa Gomez (luisa.gomez@pucp.edu.pe)")
 
     # Breve explicación de cómo abrir archivos
     st.write("""
@@ -959,6 +949,7 @@ st.markdown("""
    
    
    
+
 
 
 
