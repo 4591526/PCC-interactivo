@@ -946,8 +946,8 @@ st.markdown("""
     📩 luisa.gomez@pucp.edu.pe <br>
     💻 <a href="https://github.com/4591526/" 
           target="_blank" 
-          style="text-decoration:none; color:#d9307f; font-weight:600;">
-          @literaturaperuqueer
+          style="text-decoration:none; font-weight:600;">
+          GitHub 4591526
     </a>
 </div>
 """, unsafe_allow_html=True)
@@ -959,6 +959,7 @@ st.markdown("""
    
    
    
+
 
 
 
