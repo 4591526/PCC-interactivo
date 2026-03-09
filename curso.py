@@ -933,7 +933,24 @@ if opciones == "Abrir archivos":
     - Se imprime el contenido del archivo.
     """)
 
+st.markdown("""
+<hr style="margin-top:60px; margin-bottom:20px;">
 
+<div style="
+    text-align:center;
+    font-size:18px;
+    color:#555;
+    padding-bottom:20px;
+">
+    <p> Luisa Gomez </p>
+    📩 luisa.gomez@pucp.edu.pe <br>
+    💻 <a href="https://github.com/4591526/" 
+          target="_blank" 
+          style="text-decoration:none; color:#d9307f; font-weight:600;">
+          @literaturaperuqueer
+    </a>
+</div>
+""", unsafe_allow_html=True)
 
     
     
@@ -942,6 +959,7 @@ if opciones == "Abrir archivos":
    
    
    
+
 
 
 
