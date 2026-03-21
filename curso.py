@@ -4,6 +4,12 @@ import pandas as pd
 import graphviz
 from streamlit_option_menu import option_menu
 
+st.set_page_config(
+    page_title="Pensamiento COmputacional",
+    page_icon="code",
+    layout="wide"
+)
+
 #st.title("Pensamiento Computacional")
 
 st.sidebar.title("Pensamiento Computacional")
