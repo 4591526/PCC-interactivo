@@ -943,13 +943,18 @@ st.markdown("""
     color:#555;
     padding-bottom:20px;
 ">
-    <p> Luisa Gomez </p>
-    📩 luisa.gomez@pucp.edu.pe <br>
-    💻 <a href="https://github.com/4591526/" 
-          target="_blank" 
-          style="text-decoration:none; font-weight:600;">
-          GitHub 4591526
+    <p><strong>Luisa Gomez</strong></p>
+
+    <i class="fa-solid fa-envelope"></i> 
+    luisa.gomez@pucp.edu.pe <br>
+
+    <i class="fa-brands fa-github"></i> 
+    <a href="https://github.com/4591526/" 
+       target="_blank" 
+       style="text-decoration:none; font-weight:600;">
+       GitHub 4591526
     </a>
+
 </div>
 """, unsafe_allow_html=True)
 
