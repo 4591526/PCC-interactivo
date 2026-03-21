@@ -2,6 +2,7 @@ import streamlit as st
 from streamlit_monaco import st_monaco
 import pandas as pd
 import graphviz
+from streamlit_option_menu import option_menu
 
 #st.title("Pensamiento Computacional")
 
