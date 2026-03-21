@@ -7,14 +7,13 @@ from streamlit_option_menu import option_menu
 #st.title("Pensamiento Computacional")
 
 st.sidebar.title("Pensamiento Computacional")
-opciones = st.sidebar.selectbox("Selecciona la clase que deseas ver:",["Mi primer código en Python", 
-            "Variables", "Tipos de datos", "Operadores aritméticos", "Cadena de caracteres", "Listas", 
-            "Expresiones booleanas", "Declaraciones condicionales", "Bucles", "Diccionarios", "Librerías", "Abrir archivos"] )
+
 with st.sidebar:
     selected = option_menu("Selecciona la clase que deseas ver: ",["Mi primer código en Python", 
             "Variables", "Tipos de datos", "Operadores aritméticos", "Cadena de caracteres", "Listas", 
             "Expresiones booleanas", "Declaraciones condicionales", "Bucles", "Diccionarios", "Librerías", "Abrir archivos"] , 
-        icons=['1-circle', '2-circle', '3-circle', 'calculator', 'alphabet', 'list', '7-circle', '8-circle', '9-circle', 'braces', 'collection', 'e-earmark-arrow-up'], menu_icon="filetype-py", default_index=0)
+        icons=['1-circle', '2-circle', '3-circle', 'calculator', 'alphabet', 'list', '7-circle', '8-circle', '9-circle', 'braces', 
+               'collection', 'file-earmark-arrow-up'], menu_icon="filetype-py", default_index=0)
             
 if opciones == "Mi primer código en Python":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Mi primer código en Python</h2>', unsafe_allow_html=True)
