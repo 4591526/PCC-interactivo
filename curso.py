@@ -929,7 +929,7 @@ if opciones == "Abrir archivos":
     """)
 
 st.markdown("""
-<hr style="margin-top:60px; margin-bottom:20px;">
+<hr style="margin-top:40px; margin-bottom:20px;">
 
 <div style="
     text-align:center;
