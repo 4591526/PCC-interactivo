@@ -938,9 +938,9 @@ st.markdown("""
 <hr style="margin-top:40px; margin-bottom:20px;"> 
 <div style=" text-align:center; font-size:18px; color:#555; padding-bottom:20px; "> 
 <p><b>Luisa Gomez</b></p> 
-📩 luisa.gomez@pucp.edu.pe 
-💻 <a href="https://github.com/4591526/" target="_blank" style="text-decoration:none; font-weight:600;"> 
-GitHub 4591526 </a> </div> """, unsafe_allow_html=True)
+📩 luisa.gomez@pucp.edu.pe </br>
+💻 GitHub <a href="https://github.com/4591526/" target="_blank" style="text-decoration:none; font-weight:600;"> 
+4591526 </a> </div> """, unsafe_allow_html=True)
 
     
     
