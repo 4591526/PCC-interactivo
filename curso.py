@@ -9,7 +9,7 @@ from streamlit_option_menu import option_menu
 st.sidebar.title("Pensamiento Computacional")
 
 with st.sidebar:
-    opciones = option_menu("Selecciona la clase que deseas ver: ",["Mi primer código en Python", 
+    opciones = option_menu("Temas de clase: ",["Mi primer código en Python", 
             "Variables", "Tipos de datos", "Operadores aritméticos", "Cadena de caracteres", "Listas", 
             "Expresiones booleanas", "Declaraciones condicionales", "Bucles", "Diccionarios", "Librerías", "Abrir archivos"] , 
         icons=['1-circle', '2-circle', '3-circle', 'calculator', 'alphabet', 'list', '7-circle', '8-circle', '9-circle', 'braces', 
