@@ -5,8 +5,8 @@ import graphviz
 from streamlit_option_menu import option_menu
 
 st.set_page_config(
-    page_title="Pensamiento COmputacional",
-    page_icon="code",
+    page_title="Pensamiento Computacional",
+    page_icon="💻",
     layout="wide"
 )
 
