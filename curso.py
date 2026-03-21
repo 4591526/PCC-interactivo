@@ -22,7 +22,7 @@ with st.sidebar:
                'collection', 'file-earmark-arrow-up'], menu_icon="filetype-py", default_index=0)
             
 if opciones == "Mi primer código en Python":
-    st.markdown(f'<h2 style="font-size: 42px; text-align: center; color: #6C6C93">Mi primer código en Python</h2>', unsafe_allow_html=True)
+    st.markdown(f'<h2 style="font-size: 42px; text-align: center; color: #4E4E8A">Mi primer código en Python</h2>', unsafe_allow_html=True)
 
     # Descripción de los editores de código: Visual Studio Code, Jupyter y Google Colaboratory
         
