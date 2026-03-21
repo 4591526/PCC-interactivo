@@ -934,33 +934,13 @@ if opciones == "Abrir archivos":
     - Se imprime el contenido del archivo.
     """)
 
-st.markdown("""
-<hr style="margin-top:40px; margin-bottom:20px;">
-
-<div style="
-    text-align:center;
-    font-size:18px;
-    color:#555;
-    padding-bottom:20px;
-">
-
-    <p style="margin-bottom:5px;"><strong>Luisa Gomez</strong></p>
-
-    <p style="margin:2px;">
-        📩 luisa.gomez@pucp.edu.pe
-    </p>
-
-    <p style="margin:2px;">
-        💻 
-        <a href="https://github.com/4591526/" 
-           target="_blank" 
-           style="text-decoration:none; font-weight:600;">
-           GitHub 4591526
-        </a>
-    </p>
-
-</div>
-""", unsafe_allow_html=True)
+st.markdown(""" 
+<hr style="margin-top:40px; margin-bottom:20px;"> 
+<div style=" text-align:center; font-size:18px; color:#555; padding-bottom:20px; "> 
+<p> Luisa Gomez </p> 
+📩 luisa.gomez@pucp.edu.pe <br> 
+💻 <a href="https://github.com/4591526/" target="_blank" style="text-decoration:none; font-weight:600;"> 
+GitHub 4591526 </a> </div> """, unsafe_allow_html=True)
 
     
     
