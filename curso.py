@@ -935,6 +935,8 @@ if opciones == "Abrir archivos":
     """)
 
 st.markdown("""
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 <hr style="margin-top:40px; margin-bottom:20px;">
 
 <div style="
@@ -943,17 +945,24 @@ st.markdown("""
     color:#555;
     padding-bottom:20px;
 ">
-    <p><strong>Luisa Gomez</strong></p>
 
-    <i class="fa-solid fa-envelope"></i> 
-    luisa.gomez@pucp.edu.pe <br>
+    <p style="margin-bottom:5px;">
+        <strong>Luisa Gomez</strong>
+    </p>
 
-    <i class="fa-brands fa-github"></i> 
-    <a href="https://github.com/4591526/" 
-       target="_blank" 
-       style="text-decoration:none; font-weight:600;">
-       GitHub 4591526
-    </a>
+    <p style="margin:2px;">
+        <i class="fa-solid fa-envelope"></i>
+        luisa.gomez@pucp.edu.pe
+    </p>
+
+    <p style="margin:2px;">
+        <i class="fa-brands fa-github"></i>
+        <a href="https://github.com/4591526/" 
+           target="_blank" 
+           style="text-decoration:none; font-weight:600; color:#555;">
+           GitHub 4591526
+        </a>
+    </p>
 
 </div>
 """, unsafe_allow_html=True)
