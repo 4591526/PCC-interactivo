@@ -82,15 +82,17 @@ if opciones == "Introducción":
         @st.dialog("Sobre Python")
         def show_info():
             
-            st.image("https://upload.wikimedia.org/wikipedia/commons/6/66/Guido_van_Rossum_OSCON_2006.jpg",
-                     caption="Guido van Rossum – creador de Python",
-                     width=250)
+            col1, col2, col3 = st.columns([1,2,1])
+
+            with col2:
+                st.image(
+                    "https://upload.wikimedia.org/wikipedia/commons/6/66/Guido_van_Rossum_OSCON_2006.jpg",
+                    caption="Guido van Rossum – creador de Python",
+                    width=250
+                )
     
             st.markdown("""
-            **Python** es un lenguaje muy usado en investigación, análisis de datos y desarrollo de software.
-    
-            🔗 Página oficial:  
-            [Python](https://www.python.org/)
+            🔗 Página oficial de [Python](https://www.python.org/)
             """)
     
         show_info()
