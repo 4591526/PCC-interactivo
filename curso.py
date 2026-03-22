@@ -113,11 +113,6 @@ if opciones == "Introducción":
     # VS CODE
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E"> Visual Studio Code</h2>', unsafe_allow_html=True)
 
-    col7, col8, col9 = st.columns([1,1.2,1])
-
-    with col8:
-        st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9E5HZlsBUfIyQdZy53DBNd5c9aIxECWdFww&s", width=250)
-
     st.write("""
     **Visual Studio Code (VS Code)** es un editor de código fuente gratuito y 
     multiplataforma desarrollado por Microsoft.
@@ -132,6 +127,26 @@ if opciones == "Introducción":
     - Integra GitHub para control de versiones  
     """)
 
+    col7, col8, col9 = st.columns([1,2,1])
+    with col8:
+        # Botón que abre el popup
+        if st.button("Ver más sobre VS Code"):
+            
+            @st.dialog("Visual Studio Code")
+            def show_info():
+                
+                col10, col11, col12 = st.columns([1,2,1])
+    
+                with col11:
+                    st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9E5HZlsBUfIyQdZy53DBNd5c9aIxECWdFww&s", width=250)
+        
+                st.markdown("""
+                🔗 Página oficial de [VS Code](https://code.visualstudio.com)
+                """)
+        
+            show_info()
+
+    
     # COLAB Y JUPYTER
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Google Colab y Jupyter Notebook</h2>', unsafe_allow_html=True)
 
@@ -171,12 +186,32 @@ if opciones == "Introducción":
     # Mostrar en Streamlit
     st.dataframe(df)
 
+    col13, col14, col15 = st.columns([1,2,1])
+    with col14:
+        # Botón que abre el popup
+        if st.button("Ver más sobre Colab y Jupyter"):
+            
+            @st.dialog("Notebooks: Colab y Jupyter")
+            def show_info():
+                
+                col16, col17, col18 = st.columns([1,2,1])
+    
+                with col17:
+                    st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvyuHWMd6UOi4d_oVuHTBZsGvS7kG6TFK2yQ&s", width=250)
+                    st.image("https://images.seeklogo.com/logo-png/35/1/jupyter-logo-png_seeklogo-354673.png", width=250)
+        
+                st.markdown("""
+                🔗 Dónde descargar [Colab](https://workspace.google.com/marketplace/app/colaboratory/1014160490159?hl=es)
+                🔗 Página oficial de [Jupyter](https://jupyter.org)
+                """)
+            show_info()
+    
     st.divider() ## Separador
 
     # VIDEO
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Video: Google Colab y Jupyter Notebook</h2>', unsafe_allow_html=True)
-    col12, col13, col14 = st.columns([1,1.5,1])
-    with col13:
+    col19, col20, col21 = st.columns([1,1.5,1])
+    with col20:
     # Insertar un video explicativo de los entornos: VSC y Jupyter
         st.video("https://www.youtube.com/watch?v=IVMNhciviwc")
 
