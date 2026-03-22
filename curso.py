@@ -82,14 +82,17 @@ if opciones == "Introducción":
         @st.dialog("Sobre Python")
         def show_info():
             
-            col1, col2, col3 = st.columns([1,2,1])
+            col7, col8, col9 = st.columns([1,2,1])
 
-            with col2:
-                st.image(
-                    "https://upload.wikimedia.org/wikipedia/commons/6/66/Guido_van_Rossum_OSCON_2006.jpg",
-                    caption="Guido van Rossum\ncreador de Python",
-                    width=250
-                )
+            with col8:
+                st.image("https://upload.wikimedia.org/wikipedia/commons/6/66/Guido_van_Rossum_OSCON_2006.jpg",, width=250)
+                         
+                st.markdown("""
+                <p style="text-align:center; font-size:14px;">
+                Guido van Rossum <br>
+                Creador de Python
+                </p>
+                """, unsafe_allow_html=True)
     
             st.markdown("""
             🔗 Página oficial de [Python](https://www.python.org/)
