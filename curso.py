@@ -15,13 +15,67 @@ st.set_page_config(
 st.sidebar.title("Pensamiento Computacional")
 
 with st.sidebar:
-    opciones = option_menu("Temas de clase: ",["Mi primer código en Python", 
+    opciones = option_menu("Temas de clase: ",["Introducción","Mi primer código en Python", 
             "Variables", "Tipos de datos", "Operadores aritméticos", "Cadena de caracteres", "Listas", 
             "Expresiones booleanas", "Declaraciones condicionales", "Bucles", "Diccionarios", "Librerías", "Abrir archivos"] , 
-        icons=['1-circle', '2-circle', '3-circle', 'calculator', 'alphabet', 'list', '7-circle', '8-circle', '9-circle', 'braces', 
-               'collection', 'file-earmark-arrow-up'], menu_icon="filetype-py", default_index=0)
-            
-if opciones == "Mi primer código en Python":
+        icons=['0-circle','1-circle', '2-circle', '3-circle', 'calculator', 'alphabet', 'list', '7-circle', '8-circle', '9-circle', 'braces', 
+               'collection', 'file-earmark-arrow-up'], menu_icon="filetype-py", default_index=1)
+
+if opciones == "Introducción":
+    st.markdown(f'<h2 style="font-size: 40px; text-align: center; color: #4E4E8A">¿Qué es programar? 🤔</h2>', unsafe_allow_html=True)
+    st.write("""
+    Una forma sencilla de entender qué es programar es pensar en una receta de cocina. 
+    Por ejemplo, para preparar pasta seguimos una secuencia de instrucciones: primero hervimos agua, luego agregamos la pasta,
+    después esperamos aproximadamente diez minutos y finalmente colamos. 
+    Esta secuencia ordenada de pasos para lograr un objetivo es lo que en programación se conoce como un algoritmo.
+    
+    Un algoritmo, por tanto, no es algo exclusivo de las computadoras, 
+    sino una forma estructurada de resolver un problema mediante instrucciones claras y ordenadas.
+
+    Programar implica desarrollar habilidades como:
+    * Descomponer problemas: dividir un problema grande en partes más pequeñas y manejables.
+    * Ordenar pasos: establecer una secuencia lógica de acciones.
+    * Tomar decisiones: definir qué hacer según ciertas condiciones.
+    * Reconocer patrones: identificar repeticiones o similitudes que permitan simplificar el problema.
+    * Automatizar procesos: lograr que una tarea repetitiva pueda ejecutarse de forma automática.
+    
+    En este sentido, programar no solo consiste en escribir código, sino en aprender a pensar de manera estructurada para resolver problemas de forma 
+    eficiente.
+    """)
+
+    st.markdown(f'<h2 style="font-size: 40px; text-align: center; color: #4E4E8A">¿Qué NO es programar? ❌</h2>', unsafe_allow_html=True)
+    st.write("""
+    Existen muchas ideas equivocadas sobre lo que significa programar. 
+    Programar no consiste en memorizar grandes cantidades de código ni en conocer fórmulas complejas. 
+    Tampoco implica necesariamente ser bueno en matemáticas, ni saber muchos lenguajes de programación. 
+    Del mismo modo, no es una actividad exclusiva de ingenieros ni requiere escribir instrucciones complicadas o incomprensibles.
+
+    Más bien, programar es una habilidad que puede aprender cualquier persona interesada en resolver problemas de manera estructurada. 
+    Se trata principalmente de organizar ideas, pensar con lógica y encontrar formas claras de dar instrucciones paso a paso para alcanzar un objetivo.
+    """)
+
+    st.markdown(f'<h2 style="font-size: 40px; text-align: center; color: #4E4E8A">¿Qué es Python? 💻</h2>', unsafe_allow_html=True)
+    st.write("""
+    Python es un lenguaje de programación que permite convertir ideas en instrucciones que una computadora puede ejecutar. 
+    Fue creado por Guido van Rossum y presentado en 1991. 
+    Se trata de un lenguaje de programación de alto nivel, diseñado para ser sencillo, claro y fácil de leer.
+
+    Python puede considerarse como un puente entre el lenguaje humano y el lenguaje de las máquinas, 
+    ya que su sintaxis se parece mucho al lenguaje natural. 
+    Gracias a esta característica, su aprendizaje suele ser más accesible en comparación con otros lenguajes de programación, 
+    especialmente para estudiantes que no provienen de áreas técnicas.
+    
+    Entre sus principales características destacan:
+    * Facilidad de lectura: su sintaxis clara permite comprender el código con relativa facilidad.
+    * Cercanía al lenguaje humano: muchas de sus instrucciones se parecen a expresiones del inglés cotidiano.
+    * Amplio uso en investigación: Python es una herramienta muy utilizada en el análisis de datos y la investigación académica.
+    * Aplicación en lingüística computacional: permite analizar textos, estudiar patrones lingüísticos y procesar lenguaje natural.
+    * Uso en periodismo de datos: facilita el análisis de grandes volúmenes de información y la automatización de procesos de análisis.
+    
+    En este sentido, Python no solo es una herramienta técnica, sino también un recurso que permite a investigadores, 
+    comunicadores y lingüistas desarrollar nuevas formas de analizar información y resolver problemas mediante el pensamiento computacional.
+    """)
+elif opciones == "Mi primer código en Python":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; color: #4E4E8A">Mi primer código en Python</h2>', unsafe_allow_html=True)
 
     # Descripción de los editores de código: Visual Studio Code, Jupyter y Google Colaboratory
