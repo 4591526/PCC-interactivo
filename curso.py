@@ -176,7 +176,7 @@ if opciones == "Introducción":
     # VIDEO
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Video: Google Colab y Jupyter Notebook</h2>', unsafe_allow_html=True)
     col12, col13, col14 = st.columns([1,1.5,1])
-    with col14:
+    with col13:
     # Insertar un video explicativo de los entornos: VSC y Jupyter
         st.video("https://www.youtube.com/watch?v=IVMNhciviwc")
 
