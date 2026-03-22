@@ -116,7 +116,7 @@ if opciones == "Introducción":
     col7, col8, col9 = st.columns([1,1.2,1])
 
     with col8:
-        st.image("https://e7.pngegg.com/pngimages/326/636/png-clipart-visual-studio-code-full-logo-tech-companies.png", width=300)
+        st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS9E5HZlsBUfIyQdZy53DBNd5c9aIxECWdFww&s", width=300)
 
     st.write("""
     **Visual Studio Code (VS Code)** es un editor de código fuente gratuito y 
@@ -135,7 +135,7 @@ if opciones == "Introducción":
     # COLAB Y JUPYTER
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Google Colab y Jupyter Notebook</h2>', unsafe_allow_html=True)
 
-    col10, col11, col12 = st.columns([1, 0.5, 1])
+    col10, col11, col12 = st.columns(3)
     with col10:
         st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvyuHWMd6UOi4d_oVuHTBZsGvS7kG6TFK2yQ&s", width=250)
     with col12:
