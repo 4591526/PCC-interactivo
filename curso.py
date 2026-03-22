@@ -33,11 +33,11 @@ if opciones == "Introducción":
     sino una forma estructurada de resolver un problema mediante instrucciones claras y ordenadas.
 
     Programar implica desarrollar habilidades como:
-    * Descomponer problemas: dividir un problema grande en partes más pequeñas y manejables.
-    * Ordenar pasos: establecer una secuencia lógica de acciones.
-    * Tomar decisiones: definir qué hacer según ciertas condiciones.
-    * Reconocer patrones: identificar repeticiones o similitudes que permitan simplificar el problema.
-    * Automatizar procesos: lograr que una tarea repetitiva pueda ejecutarse de forma automática.
+    * Descomponer un problema grande en partes más pequeñas y manejables.
+    * Establecer una secuencia lógica u ordenada de acciones.
+    * Definir qué hacer según ciertas condiciones.
+    * Identificar repeticiones o similitudes que permitan simplificar el problema.
+    * Lograr que una tarea repetitiva pueda ejecutarse de forma automática.
     
     En este sentido, programar no solo consiste en escribir código, sino en aprender a pensar de manera estructurada para resolver problemas de forma 
     eficiente.
@@ -66,15 +66,34 @@ if opciones == "Introducción":
     especialmente para estudiantes que no provienen de áreas técnicas.
     
     Entre sus principales características destacan:
-    * Facilidad de lectura: su sintaxis clara permite comprender el código con relativa facilidad.
-    * Cercanía al lenguaje humano: muchas de sus instrucciones se parecen a expresiones del inglés cotidiano.
-    * Amplio uso en investigación: Python es una herramienta muy utilizada en el análisis de datos y la investigación académica.
-    * Aplicación en lingüística computacional: permite analizar textos, estudiar patrones lingüísticos y procesar lenguaje natural.
-    * Uso en periodismo de datos: facilita el análisis de grandes volúmenes de información y la automatización de procesos de análisis.
+    * su sintaxis clara que permite comprender el código con relativa facilidad,
+    * muchas de sus instrucciones se parecen a expresiones del inglés cotidiano,
+    * Python es una herramienta muy utilizada en el análisis de datos y la investigación académica,
+    * permite analizar textos, estudiar patrones lingüísticos y procesar lenguaje natural,
+    * facilita el análisis de grandes volúmenes de información y la automatización de procesos de análisis.
     
-    En este sentido, Python no solo es una herramienta técnica, sino también un recurso que permite a investigadores, 
-    comunicadores y lingüistas desarrollar nuevas formas de analizar información y resolver problemas mediante el pensamiento computacional.
+    En este sentido, Python no solo es una herramienta técnica, sino también un recurso que permite a investigadores
+    desarrollar nuevas formas de analizar información y resolver problemas mediante el pensamiento computacional.
     """)
+
+    # Botón que abre el popup
+    if st.button("Ver más sobre Python"):
+        
+        @st.dialog("Sobre Python")
+        def show_info():
+            
+            st.image("https://upload.wikimedia.org/wikipedia/commons/6/66/Guido_van_Rossum_OSCON_2006.jpg",
+                     caption="Guido van Rossum – creador de Python",
+                     width=250)
+    
+            st.markdown("""
+            **Python** es un lenguaje muy usado en investigación, análisis de datos y desarrollo de software.
+    
+            🔗 Página oficial:  
+            [Python](https://www.python.org/)
+            """)
+    
+        show_info()
 elif opciones == "Mi primer código en Python":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; color: #4E4E8A">Mi primer código en Python</h2>', unsafe_allow_html=True)
 
