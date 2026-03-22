@@ -85,7 +85,7 @@ if opciones == "Introducción":
             col7, col8, col9 = st.columns([1,2,1])
 
             with col8:
-                st.image("https://upload.wikimedia.org/wikipedia/commons/6/66/Guido_van_Rossum_OSCON_2006.jpg",, width=250)
+                st.image("https://upload.wikimedia.org/wikipedia/commons/6/66/Guido_van_Rossum_OSCON_2006.jpg", width=250)
                          
                 st.markdown("""
                 <p style="text-align:center; font-size:14px;">
