@@ -54,6 +54,8 @@ if opciones == "Introducción":
     Se trata principalmente de organizar ideas, pensar con lógica y encontrar formas claras de dar instrucciones paso a paso para alcanzar un objetivo.
     """)
 
+    st.divider() ## Separador
+    
     st.markdown(f'<h2 style="font-size: 40px; text-align: center; color: #4E4E8A">¿Qué es Python? 💻</h2>', unsafe_allow_html=True)
     st.write("""
     Python es un lenguaje de programación que permite convertir ideas en instrucciones que una computadora puede ejecutar. 
@@ -102,6 +104,7 @@ if opciones == "Introducción":
         
             show_info()
 
+    st.divider() ## Separador
     
     st.markdown(f'<h2 style="font-size: 40px; text-align: center; color: #4E4E8A"> Entornos de programación en Python ⌨</h2>', unsafe_allow_html=True)
     st.write("""
@@ -200,8 +203,6 @@ if opciones == "Introducción":
                 🔗 Página oficial de [Jupyter](https://jupyter.org)
                 """)
             show_info()
-    
-    st.divider() ## Separador
 
     # VIDEO
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Video: Google Colab y Jupyter Notebook</h2>', unsafe_allow_html=True)
