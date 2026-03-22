@@ -135,10 +135,10 @@ if opciones == "Introducción":
     # COLAB Y JUPYTER
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Google Colab y Jupyter Notebook</h2>', unsafe_allow_html=True)
 
-    col10, col11 = st.columns(2)
+    col10, col11, col12 = st.columns([1.5, 0.5, 1.5])
     with col10:
         st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvyuHWMd6UOi4d_oVuHTBZsGvS7kG6TFK2yQ&s", width=250)
-    with col11:
+    with col12:
         st.image("https://images.seeklogo.com/logo-png/35/1/jupyter-logo-png_seeklogo-354673.png", width=250)
     
     st.write("""
@@ -175,8 +175,8 @@ if opciones == "Introducción":
 
     # VIDEO
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Video: Google Colab y Jupyter Notebook</h2>', unsafe_allow_html=True)
-    col12, col13, col14 = st.columns([1,1.5,1])
-    with col13:
+    col13, col14, col15 = st.columns([1,1.5,1])
+    with col14:
     # Insertar un video explicativo de los entornos: VSC y Jupyter
         st.video("https://www.youtube.com/watch?v=IVMNhciviwc")
 
