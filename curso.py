@@ -87,7 +87,7 @@ if opciones == "Introducción":
             with col2:
                 st.image(
                     "https://upload.wikimedia.org/wikipedia/commons/6/66/Guido_van_Rossum_OSCON_2006.jpg",
-                    caption="Guido van Rossum \n creador de Python",
+                    caption="Guido van Rossum\ncreador de Python",
                     width=250
                 )
     
