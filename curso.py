@@ -81,7 +81,7 @@ if opciones == "Introducción":
         # Botón que abre el popup
         if st.button("Ver más sobre Python"):
             
-            @st.dialog("Sobre Python")
+            @st.dialog("Python")
             def show_info():
                 
                 col10, col11, col12 = st.columns([1,2,1])
