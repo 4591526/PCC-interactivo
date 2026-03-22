@@ -76,29 +76,32 @@ if opciones == "Introducción":
     desarrollar nuevas formas de analizar información y resolver problemas mediante el pensamiento computacional.
     """)
 
-    # Botón que abre el popup
-    if st.button("Ver más sobre Python"):
-        
-        @st.dialog("Sobre Python")
-        def show_info():
+    col7, col8, col9 = st.columns([1,2,1])
+    with col8:
+        # Botón que abre el popup
+        if st.button("Ver más sobre Python"):
             
-            col7, col8, col9 = st.columns([1,2,1])
-
-            with col8:
-                st.image("https://upload.wikimedia.org/wikipedia/commons/6/66/Guido_van_Rossum_OSCON_2006.jpg", width=250)
-                         
+            @st.dialog("Sobre Python")
+            def show_info():
+                
+                col10, col11, col12 = st.columns([1,2,1])
+    
+                with col11:
+                    st.image("https://upload.wikimedia.org/wikipedia/commons/6/66/Guido_van_Rossum_OSCON_2006.jpg", width=250)
+                             
+                    st.markdown("""
+                    <p style="text-align:center; font-size:14px;">
+                    Guido van Rossum <br>
+                    Creador de Python
+                    </p>
+                    """, unsafe_allow_html=True)
+        
                 st.markdown("""
-                <p style="text-align:center; font-size:14px;">
-                Guido van Rossum <br>
-                Creador de Python
-                </p>
-                """, unsafe_allow_html=True)
-    
-            st.markdown("""
-            🔗 Página oficial de [Python](https://www.python.org/)
-            """)
-    
-        show_info()
+                🔗 Página oficial de [Python](https://www.python.org/)
+                """)
+        
+            show_info()
+            
 elif opciones == "Mi primer código en Python":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; color: #4E4E8A">Mi primer código en Python</h2>', unsafe_allow_html=True)
 
