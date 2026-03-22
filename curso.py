@@ -135,7 +135,7 @@ if opciones == "Introducción":
     # COLAB Y JUPYTER
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Google Colab y Jupyter Notebook</h2>', unsafe_allow_html=True)
 
-    col10, col11, col12 = st.columns([1.5, 0.5, 1.5])
+    col10, col11, col12 = st.columns([1, 0, 1])
     with col10:
         st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvyuHWMd6UOi4d_oVuHTBZsGvS7kG6TFK2yQ&s", width=250)
     with col12:
