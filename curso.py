@@ -43,6 +43,8 @@ if opciones == "Introducción":
     eficiente.
     """)
 
+    st.write("")
+    
     st.markdown(f'<h2 style="font-size: 40px; text-align: center; color: #4E4E8A">¿Qué NO es programar? ❌</h2>', unsafe_allow_html=True)
     st.write("""
     Existen muchas ideas equivocadas sobre lo que significa programar. 
@@ -149,6 +151,7 @@ if opciones == "Introducción":
         
             show_info()
 
+    st.write("")
     
     # COLAB Y JUPYTER
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Google Colab y Jupyter Notebook</h2>', unsafe_allow_html=True)
@@ -203,7 +206,9 @@ if opciones == "Introducción":
                 🔗 Página oficial de [Jupyter](https://jupyter.org)
                 """)
             show_info()
-
+            
+    st.write("")
+    
     # VIDEO
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Video: Google Colab y Jupyter Notebook</h2>', unsafe_allow_html=True)
     col19, col20, col21 = st.columns([1,1.5,1])
