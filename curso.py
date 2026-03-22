@@ -195,7 +195,7 @@ if opciones == "Introducción":
                     st.image("https://images.seeklogo.com/logo-png/35/1/jupyter-logo-png_seeklogo-354673.png", width=250)
         
                 st.markdown("""
-                🔗 Dónde descargar [Colab](https://workspace.google.com/marketplace/app/colaboratory/1014160490159?hl=es) </br>
+                🔗 Dónde descargar [Colab](https://workspace.google.com/marketplace/app/colaboratory/1014160490159?hl=es) <br>
                 🔗 Página oficial de [Jupyter](https://jupyter.org)
                 """)
             show_info()
