@@ -137,9 +137,9 @@ if opciones == "Introducción":
 
     col10, col11 = st.columns([1,1])
     with col10:
-        st.image("https://images.seeklogo.com/logo-png/35/1/jupyter-logo-png_seeklogo-354673.png", width=300)
+        st.image("https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTvyuHWMd6UOi4d_oVuHTBZsGvS7kG6TFK2yQ&s", width=300)
     with col11:
-        st.image("https://w7.pngwing.com/pngs/968/991/png-transparent-google-colab-logo-tech-companies.png", width=300)
+        st.image("https://images.seeklogo.com/logo-png/35/1/jupyter-logo-png_seeklogo-354673.png", width=300)
     
     st.write("""
     **Google Colaboratory (Colab)** y **Jupyter Notebook** son entornos 
