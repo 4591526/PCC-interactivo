@@ -278,78 +278,78 @@ elif opciones == "Mi primer código en Python":
     
         if st.button("Resolver ejercicios prácticos"):
         
-        @st.dialog("Ejercicios prácticos: Primer programa")
-        def show_info():
-
-            st.write("Escribe las respuestas como código Python:")
-
-            st.divider()
-
-            # Ejercicio 1
-            st.subheader("Ejercicio 1")
-
-            r1 = st.text_input(
-                "Escribe un programa que muestre tu apellido usando print():"
-            )
-
-            if r1:
-                if "print" in r1:
-                    st.success("Correcto. Estás usando print().")
-                else:
-                    st.warning("Recuerda usar print()")
-
-            # Ejercicio 2
-            st.subheader("Ejercicio 2")
-
-            r2 = st.text_input(
-                "Muestra el resultado de 20 + 26:"
-            )
-
-            if r2:
-                if "20" in r2 and "26" in r2:
-                    st.success("Bien. Estás usando los números correctos.")
-                else:
-                    st.info("Verifica los valores.")
-
-            # Ejercicio 3
-            st.subheader("Ejercicio 3")
-
-            r3 = st.text_input(
-                "Usa help() con la función type:"
-            )
-
-            if r3:
-                if "help" in r3 and "type" in r3:
-                    st.success("Correcto.")
-                else:
-                    st.warning("La respuesta esperada es algo como: help(type)")
-
-            # Ejercicio 4
-            st.subheader("Ejercicio 4")
-
-            r4 = st.text_input(
-                "Escribe un comentario explicando tu código:"
-            )
-
-            if r4:
-                if "#" in r4:
-                    st.success("Correcto. Usaste un comentario.")
-                else:
-                    st.warning("Recuerda que los comentarios usan #")
-
-            st.divider()
-
-            if st.button("Ver solución"):
-                
-                st.code("""
-print("Gomez")
-
-print(20 + 26)
-
-help(type)
-
-# Este programa muestra mi apellido
-""", language="python")
+            @st.dialog("Ejercicios prácticos: Primer programa")
+            def show_info():
+    
+                st.write("Escribe las respuestas como código Python:")
+    
+                st.divider()
+    
+                # Ejercicio 1
+                st.subheader("Ejercicio 1")
+    
+                r1 = st.text_input(
+                    "Escribe un programa que muestre tu apellido usando print():"
+                )
+    
+                if r1:
+                    if "print" in r1:
+                        st.success("Correcto. Estás usando print().")
+                    else:
+                        st.warning("Recuerda usar print()")
+    
+                # Ejercicio 2
+                st.subheader("Ejercicio 2")
+    
+                r2 = st.text_input(
+                    "Muestra el resultado de 20 + 26:"
+                )
+    
+                if r2:
+                    if "20" in r2 and "26" in r2:
+                        st.success("Bien. Estás usando los números correctos.")
+                    else:
+                        st.info("Verifica los valores.")
+    
+                # Ejercicio 3
+                st.subheader("Ejercicio 3")
+    
+                r3 = st.text_input(
+                    "Usa help() con la función type:"
+                )
+    
+                if r3:
+                    if "help" in r3 and "type" in r3:
+                        st.success("Correcto.")
+                    else:
+                        st.warning("La respuesta esperada es algo como: help(type)")
+    
+                # Ejercicio 4
+                st.subheader("Ejercicio 4")
+    
+                r4 = st.text_input(
+                    "Escribe un comentario explicando tu código:"
+                )
+    
+                if r4:
+                    if "#" in r4:
+                        st.success("Correcto. Usaste un comentario.")
+                    else:
+                        st.warning("Recuerda que los comentarios usan #")
+    
+                st.divider()
+    
+                if st.button("Ver solución"):
+                    
+                    st.code("""
+    print("Gomez")
+    
+    print(20 + 26)
+    
+    help(type)
+    
+    # Este programa muestra mi apellido
+    """, language="python")
 
         show_info()
             
