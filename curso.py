@@ -252,7 +252,7 @@ elif opciones == "Mi primer código en Python":
     
     En este caso, la **entrada** es `"¡Hola Mundo!"` y la **salida** es el mismo texto mostrado en pantalla.
     """)
-
+    st.divider() ## Separador
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E4E8A">Función help() 🆘</h2>', unsafe_allow_html=True)
     st.code("help(print)", language="python")
     st.markdown(f"Esta función permite consultar en la documentación de Python.")
@@ -267,7 +267,7 @@ elif opciones == "Mi primer código en Python":
     Python tiene documentación integrada que permite entender funciones, ver parámetros y aprender su uso correcto.
     Esto es muy útil cuando estamos aprendiendo programación.
     """)
-
+    st.divider() ## Separador
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E4E8A">¿Cómo escribir comentarios? #️⃣</h2>', unsafe_allow_html=True)
     st.code("""# Este es un comentario
     print("Hola")
@@ -282,7 +282,7 @@ elif opciones == "Mi primer código en Python":
     **Nota:**
     Los comentarios son leídos por humanos, no por Python.
     """)
-
+    st.divider() ## Separador
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E4E8A">Errores en Python ❌</h2>', unsafe_allow_html=True)
     st.code("print(Hola)", language="python")
     st.markdown(f"Esto genera un error porque faltan comillas.")
@@ -310,11 +310,10 @@ elif opciones == "Mi primer código en Python":
 
     with col23:
     
-        if st.button("Resolver ejercicios prácticos"):
+        if st.button("Resolver algunos ejercicios prácticos"):
         
-            @st.dialog("Ejercicios prácticos: Primer programa")
+            @st.dialog("Ejercicios prácticos")
             def show_info():
-    
                 st.write("Escribe las respuestas como código Python:")
     
                 st.divider()
@@ -366,7 +365,6 @@ elif opciones == "Mi primer código en Python":
                     print(20 + 26)
                     help(type)
                     """, language="python")
-
             show_info()
             
 if opciones == "Variables":
