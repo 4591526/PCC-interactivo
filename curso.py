@@ -244,48 +244,67 @@ elif opciones == "Mi primer código en Python":
     st.markdown(f'<h2 style="font-size: 28px; text-align: center; color: #4E8A4E">¿Qué está ocurriendo aquí? 🤔</h2>', unsafe_allow_html=True)
     st.write("""
     Usamos la función `print()` para mostrar el texto **"¡Hola Mundo!"** en la pantalla.
-    La función `print()` permite mostrar cadena de caracteres (string), números o resultados de operaciones
+    La función `print()` permite mostrar cadena de caracteres (string), números o resultados de operaciones.
     
     **Nota:**  
     Una función es un bloque de código que realiza una tarea específica.
-    
     Las funciones reciben entradas (*argumentos*) y producen salidas (*resultados*)
     
-    En este caso:
-    **Entrada:** `"¡Hola Mundo!"`  
-    **Salida:** el mismo texto mostrado en pantalla.
+    En este caso, la **entrada** es `"¡Hola Mundo!"` y la **salida** es el mismo texto mostrado en pantalla.
     """)
 
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E4E8A">Función help() 🆘</h2>', unsafe_allow_html=True)
     st.code("help(print)", language="python")
     st.markdown(f"Esta función permite consultar en la documentación de Python.")
 
+    st.markdown(f'<h2 style="font-size: 28px; text-align: center; color: #4E8A4E">¿Qué está ocurriendo aquí? 🤔</h2>', unsafe_allow_html=True)
+    st.write("""
+    Usamos la función `help()` para consultar información sobre otra función.
+
+    En este caso, `help(print)` muestra la documentación de la función `print()`.
+    
+    **Nota:**
+    Python tiene documentación integrada que permite entender funciones, ver parámetros y aprender su uso correcto.
+    Esto es muy útil cuando estamos aprendiendo programación.
+    """)
+
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E4E8A">¿Cómo escribir comentarios? #️⃣</h2>', unsafe_allow_html=True)
     st.code("""# Este es un comentario
     print("Hola")
     """, language="python")
 
+    st.markdown(f'<h2 style="font-size: 28px; text-align: center; color: #4E8A4E">¿Qué está ocurriendo aquí? 🤔</h2>', unsafe_allow_html=True)
+    st.write("""
+    Los comentarios son líneas que Python **no ejecuta**.
+    Sirven para explicar el código; documentar programas; y recordar qué hace cada parte.
+    Los comentarios empiezan con `#`.
+    
+    **Nota:**
+    Los comentarios son leídos por humanos, no por Python.
+    """)
+
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E4E8A">Errores en Python ❌</h2>', unsafe_allow_html=True)
     st.code("print(Hola)", language="python")
     st.markdown(f"Esto genera un error porque faltan comillas.")
 
-    ###
-
-    # Encabezado
-    st.markdown(f'<h2 style="font-size: 30px; text-align: center; ">¿Qué está ocurriendo aquí?</h2>', unsafe_allow_html=True)
-
-    # Contenido del texto
+    st.markdown(f'<h2 style="font-size: 28px; text-align: center; color: #4E8A4E">¿Qué está ocurriendo aquí? 🤔</h2>', unsafe_allow_html=True)
     st.write("""
-    Usamos la función `print()` para imprimir el texto `'¡Hola Mundo!'` en la pantalla (output). 
-    Es decir, la función `print()` muestra la cadena de caracteres (argumento) dentro de sus paréntesis (simples o dobles) en la pantalla.
-
-    **Nota:** Una función es un bloque de código que realiza una tarea específica. 
-    Las funciones reciben entradas (llamadas argumentos, es decir, los valores que se introducen dentro de una función) y generan salidas. 
-             
-    En este caso, la función `print()` toma el texto `'¡Hola Mundo!'` como entrada y devuelve el mismo texto como salida, 
-    que se muestra en la pantalla.
-             
-    """, unsafe_allow_html=True)
+    Este código produce un error.
+    Python interpreta **Hola** como una variable.
+    Pero como no existe, aparece un error: **NameError**
+    
+    **¿Cómo se corrige?**
+    Agregando comillas:
+    `print("Hola")`
+    
+    **Nota:**
+    Los errores son parte normal del proceso de programar.
+    Aprender a leer errores ayuda a entender Python, corregir código y mejorar como programador.
+    
+    **Observación:**
+    Los errores comunes son olvidar las comillas, olvidar las paréntesis, escribir mal una función y no indentar.
+    """)
+    st.write("")
 
     col22, col23, col24 = st.columns([1,2,1])
 
