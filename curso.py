@@ -324,32 +324,18 @@ elif opciones == "Mi primer código en Python":
                     else:
                         st.warning("La respuesta esperada es algo como: help(type)")
     
-                # Ejercicio 4
-                st.subheader("Ejercicio 4")
-    
-                r4 = st.text_input(
-                    "Escribe un comentario explicando tu código:"
-                )
-    
-                if r4:
-                    if "#" in r4:
-                        st.success("Correcto. Usaste un comentario.")
-                    else:
-                        st.warning("Recuerda que los comentarios usan #")
-    
                 st.divider()
     
                 if st.button("Ver solución"):
                     
                     st.code("""
-    print("Gomez")
-    
-    print(20 + 26)
-    
-    help(type)
-    
-    # Este programa muestra mi apellido
-    """, language="python")
+                    print("Gomez")
+                        
+                    print(20 + 26)
+                        
+                    help(type)
+                        
+                    """, language="python")
 
     show_info()
             
