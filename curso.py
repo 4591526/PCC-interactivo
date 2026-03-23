@@ -218,20 +218,23 @@ if opciones == "Introducción":
 
 elif opciones == "Mi primer código en Python":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; color: #4E4E8A">Mi primer código en Python</h2>', unsafe_allow_html=True)
-
+    st.divider() ## Separador
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">¿Dónde programamos?</h2>', unsafe_allow_html=True)
     st.write("""
     Podemos usar Python en:
     
     **Notebooks (Colab, Jupyter):**
-    - Ejecutamos por celdas
-    - Resultado debajo del código
+    - El archivo completo se guarda como .ipynb
+    - La estructura del archivo presenta dos tipos de celdas: texto y código
+    - Ejecutamos por celdas de código
+    - El resultado se observa debajo de la celda código
     
     **VS Code:**
-    - Ejecutamos el archivo completo
-    - Resultado en la terminal
+    - Ejecutamos el archivo completo (.py)
+    - La estructura del archivo solo presenta líneas de código donde se puede explicar el proceso a través del formato de comentarios (#)
+    - El resultado se observa en la terminal
     """)
-    
+    st.divider() ## Separador
     # Agregar un subtítulo
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; "> print() </h2>', unsafe_allow_html=True)
 
