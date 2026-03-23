@@ -244,21 +244,14 @@ elif opciones == "Mi primer código en Python":
     st.markdown(f'<h2 style="font-size: 28px; text-align: center; color: #4E8A4E">¿Qué está ocurriendo aquí? 🤔</h2>', unsafe_allow_html=True)
     st.write("""
     Usamos la función `print()` para mostrar el texto **"¡Hola Mundo!"** en la pantalla.
-    
-    La función `print()` permite mostrar:
-    - Texto
-    - Números
-    - Resultados de operaciones
+    La función `print()` permite mostrar cadena de caracteres (string), números o resultados de operaciones
     
     **Nota:**  
     Una función es un bloque de código que realiza una tarea específica.
     
-    Las funciones:
-    - reciben entradas (*argumentos*)
-    - producen salidas (*resultados*)
+    Las funciones reciben entradas (*argumentos*) y producen salidas (*resultados*)
     
     En este caso:
-    
     **Entrada:** `"¡Hola Mundo!"`  
     **Salida:** el mismo texto mostrado en pantalla.
     """)
