@@ -333,7 +333,7 @@ elif opciones == "Mi primer código en Python":
                     help(type)
                     """, language="python")
 
-    show_info()
+            show_info()
             
 if opciones == "Variables":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Variables en Python</h2>', unsafe_allow_html=True)
