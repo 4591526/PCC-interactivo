@@ -237,14 +237,23 @@ elif opciones == "Mi primer código en Python":
     """)
     st.divider() ## Separador
     
-    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Función `print()`</h2>', unsafe_allow_html=True)
+    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Función print()</h2>', unsafe_allow_html=True)
     st.code("print('¡Hola Mundo!')", language='python')
     st.markdown(f"La función `print()` permite mostrar la información en la pantalla.")
 
-    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Función help()</h2>', unsafe_allow_html=True)
+    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Función help() 🆘</h2>', unsafe_allow_html=True)
     st.code("help(print)", language="python")
     st.markdown(f"Esta función permite consultar en la documentación de Python.")
-   
+
+    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">¿Cómo escribir comentarios? #️⃣</h2>', unsafe_allow_html=True)
+    st.code("# Este es un comentario
+    print("Hola")
+    ", language="python")
+
+    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Errores en Python ❌</h2>', unsafe_allow_html=True)
+    st.code("print(Hola)", language="python")
+    st.markdown(f"Esto genera un error porque faltan comillas.")
+
     # Agregar un subtítulo
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; ">Formato en Visual Studio Code</h2>', unsafe_allow_html=True)
 
