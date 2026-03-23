@@ -237,30 +237,18 @@ elif opciones == "Mi primer código en Python":
     """)
     st.divider() ## Separador
     
-    # Agregar un subtítulo
-    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Función print()</h2>', unsafe_allow_html=True)
-
-    # Descripción general
+    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Función `print()`</h2>', unsafe_allow_html=True)
     st.code("print('¡Hola Mundo!')", language='python')
-    st.markdown(f"La función `print()` permite mostrar información en pantalla.")
+    st.markdown(f"La función `print()` permite mostrar la información en la pantalla.")
 
+    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Función help()</h2>', unsafe_allow_html=True)
+    st.code("help(print)", language="python")
+    st.markdown(f"Esta función permite consultar en la documentación de Python.")
+   
     # Agregar un subtítulo
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; ">Formato en Visual Studio Code</h2>', unsafe_allow_html=True)
 
-    # Display text block
-    content = st_monaco(
-        value="# Escribimos nuestro primer programa en Python \nprint('¡Hola Mundo!')",
-        height="100px",
-        language="python",
-        lineNumbers=True,
-        minimap=False,
-        theme="vs-dark",)
-    if st.button("▶️"):
-        if "print('¡Hola Mundo!')" in content:
-            st.markdown(f"¡Hola Mundo!") 
-        else:
-            st.markdown(f"**SyntaxError:** Parece que escribiste algo incorrecto. Asegúrate de usar `print('¡Hola Mundo!')` en tu código.")
-
+    
     # Agregar un subtítulo
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; "> Formato en Jupyter Notebook o Google Colab </h2>', unsafe_allow_html=True)
 
