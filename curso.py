@@ -219,6 +219,19 @@ if opciones == "Introducción":
 elif opciones == "Mi primer código en Python":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; color: #4E4E8A">Mi primer código en Python</h2>', unsafe_allow_html=True)
 
+    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">¿Dónde programamos?</h2>', unsafe_allow_html=True)
+    st.write("""
+    Podemos usar Python en:
+    
+    **Notebooks (Colab, Jupyter):**
+    - Ejecutamos por celdas
+    - Resultado debajo del código
+    
+    **VS Code:**
+    - Ejecutamos el archivo completo
+    - Resultado en la terminal
+    """)
+    
     # Agregar un subtítulo
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; "> print() </h2>', unsafe_allow_html=True)
 
