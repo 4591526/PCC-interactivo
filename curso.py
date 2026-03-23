@@ -218,6 +218,7 @@ if opciones == "Introducción":
 
 elif opciones == "Mi primer código en Python":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; color: #4E4E8A">Mi primer código en Python</h2>', unsafe_allow_html=True)
+    
     st.divider() ## Separador
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">¿Dónde programamos?</h2>', unsafe_allow_html=True)
     st.write("""
@@ -235,20 +236,13 @@ elif opciones == "Mi primer código en Python":
     - El resultado se observa en la terminal
     """)
     st.divider() ## Separador
+    
     # Agregar un subtítulo
-    st.markdown(f'<h2 style="font-size: 30px; text-align: center; "> print() </h2>', unsafe_allow_html=True)
+    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Función print()</h2>', unsafe_allow_html=True)
 
     # Descripción general
     st.code("print('¡Hola Mundo!')", language='python')
-
-    st.write("""
-    <p style='text-align: justify;'>
-    Al aprender a programar en Python, se acostumbra comenzar con la ejecución de un código sencillo como se muestra anteriormente. 
-    Esta línea de código nos enseña cómo imprimir una cadena de caracteres (string) en el output, además de 
-    cómo se ejecuta un código dentro de las celdas de un notebook (Google Colab o Jupyter) o 
-    en un script de Python en VSCode que ejecutará su visualización en el terminal (output).
-    </p>
-    """, unsafe_allow_html=True)
+    st.markdown(f"La función `print()` permite mostrar información en pantalla.")
 
     # Agregar un subtítulo
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; ">Formato en Visual Studio Code</h2>', unsafe_allow_html=True)
