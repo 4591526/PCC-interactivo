@@ -241,6 +241,28 @@ elif opciones == "Mi primer código en Python":
     st.code("print('¡Hola Mundo!')", language='python')
     st.markdown(f"La función `print()` permite mostrar la información en la pantalla.")
 
+    st.markdown(f'<h2 style="font-size: 28px; text-align: center; color: #4E8A4E">¿Qué está ocurriendo aquí? 🤔</h2>', unsafe_allow_html=True)
+    st.write("""
+    Usamos la función `print()` para mostrar el texto **"¡Hola Mundo!"** en la pantalla.
+    
+    La función `print()` permite mostrar:
+    - Texto
+    - Números
+    - Resultados de operaciones
+    
+    **Nota:**  
+    Una función es un bloque de código que realiza una tarea específica.
+    
+    Las funciones:
+    - reciben entradas (*argumentos*)
+    - producen salidas (*resultados*)
+    
+    En este caso:
+    
+    **Entrada:** `"¡Hola Mundo!"`  
+    **Salida:** el mismo texto mostrado en pantalla.
+    """)
+
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E4E8A">Función help() 🆘</h2>', unsafe_allow_html=True)
     st.code("help(print)", language="python")
     st.markdown(f"Esta función permite consultar en la documentación de Python.")
