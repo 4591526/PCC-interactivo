@@ -276,72 +276,82 @@ elif opciones == "Mi primer código en Python":
 
     with col23:
     
-        if st.button("Resolver ejercicios"):
-            
-            @st.dialog("Ejercicios: Primer programa en Python")
-            def show_info():
+        if st.button("Resolver ejercicios prácticos"):
+        
+        @st.dialog("Ejercicios prácticos: Primer programa")
+        def show_info():
+
+            st.write("Escribe las respuestas como código Python:")
+
+            st.divider()
+
+            # Ejercicio 1
+            st.subheader("Ejercicio 1")
+
+            r1 = st.text_input(
+                "Escribe un programa que muestre tu apellido usando print():"
+            )
+
+            if r1:
+                if "print" in r1:
+                    st.success("Correcto. Estás usando print().")
+                else:
+                    st.warning("Recuerda usar print()")
+
+            # Ejercicio 2
+            st.subheader("Ejercicio 2")
+
+            r2 = st.text_input(
+                "Muestra el resultado de 20 + 26:"
+            )
+
+            if r2:
+                if "20" in r2 and "26" in r2:
+                    st.success("Bien. Estás usando los números correctos.")
+                else:
+                    st.info("Verifica los valores.")
+
+            # Ejercicio 3
+            st.subheader("Ejercicio 3")
+
+            r3 = st.text_input(
+                "Usa help() con la función type:"
+            )
+
+            if r3:
+                if "help" in r3 and "type" in r3:
+                    st.success("Correcto.")
+                else:
+                    st.warning("La respuesta esperada es algo como: help(type)")
+
+            # Ejercicio 4
+            st.subheader("Ejercicio 4")
+
+            r4 = st.text_input(
+                "Escribe un comentario explicando tu código:"
+            )
+
+            if r4:
+                if "#" in r4:
+                    st.success("Correcto. Usaste un comentario.")
+                else:
+                    st.warning("Recuerda que los comentarios usan #")
+
+            st.divider()
+
+            if st.button("Ver solución"):
                 
-                st.header("Quiz rápido")
-    
-                p1 = st.radio(
-                    "1. ¿Qué función permite mostrar texto en pantalla?",
-                    ["input()", "print()", "help()", "show()"],
-                    key="p1"
-                )
-    
-                p2 = st.radio(
-                    "2. ¿Cómo consultamos ayuda sobre una función?",
-                    ["info()", "help()", "doc()", "manual()"],
-                    key="p2"
-                )
-    
-                p3 = st.radio(
-                    "3. ¿Cómo se escribe un comentario?",
-                    ["// comentario", "# comentario", "/* comentario */"],
-                    key="p3"
-                )
-    
-                p4 = st.radio(
-                    "4. ¿Qué error hay aquí?\n\n print(Hola)",
-                    ["SyntaxError", "NameError", "TypeError"],
-                    key="p4"
-                )
-    
-                st.divider()
-    
-                col25, col26, col27 = st.columns([1,2,1])
-    
-                with col26:
-    
-                    if st.button("Revisar respuestas"):
-                        
-                        puntaje = 0
-    
-                        if p1 == "print()":
-                            puntaje += 1
-    
-                        if p2 == "help()":
-                            puntaje += 1
-    
-                        if p3 == "# comentario":
-                            puntaje += 1
-    
-                        if p4 == "NameError":
-                            puntaje += 1
-    
-                        st.subheader(f"Puntaje: {puntaje}/4")
-    
-                        if puntaje == 4:
-                            st.success("Excelente")
-                            st.balloons()
-    
-                        elif puntaje >= 2:
-                            st.info("Vas bien")
-    
-                        else:
-                            st.warning("Revisa el material y vuelve a intentar")
-    
-            show_info()
+                st.code("""
+print("Gomez")
+
+print(20 + 26)
+
+help(type)
+
+# Este programa muestra mi apellido
+""", language="python")
+
+        show_info()
             
 if opciones == "Variables":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Variables en Python</h2>', unsafe_allow_html=True)
