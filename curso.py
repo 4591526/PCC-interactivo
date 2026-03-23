@@ -254,48 +254,7 @@ elif opciones == "Mi primer código en Python":
     st.code("print(Hola)", language="python")
     st.markdown(f"Esto genera un error porque faltan comillas.")
 
-    # Agregar un subtítulo
-    st.markdown(f'<h2 style="font-size: 30px; text-align: center; ">Formato en Visual Studio Code</h2>', unsafe_allow_html=True)
-
-    
-    # Agregar un subtítulo
-    st.markdown(f'<h2 style="font-size: 30px; text-align: center; "> Formato en Jupyter Notebook o Google Colab </h2>', unsafe_allow_html=True)
-
-    # Bloque de texto en un box
-    st.markdown(
-    """
-    <div style="
-        padding: 10px;
-        background-color: #fefefb;
-        font-weight: bold;
-        font-size: 18px;">
-        La función print()
-    </div>
-    """,
-    unsafe_allow_html=True,
-    )
-            
-    # Bloque de código con comentario explicativo
-    codigo = """# Este programa imprime un mensaje en la pantalla
-    print('¡Hola Mundo!')"""
-
-    # Mostrar código en bloque con resaltado de sintaxis
-    content_2 = st_monaco(
-        value=codigo,
-        height="120px",
-        language="python",
-        lineNumbers=True,
-        minimap=False,
-        theme="jupyter",)
-
-    # Display both code blocks together
-    if st.button("▶️", key="run_button"):
-        if "print('¡Hola Mundo!')" in content_2:
-            st.markdown(f"¡Hola Mundo!") 
-        elif "¡Hola Mundo!" in content_2:
-            st.markdown(f"¡Hola Mundo!")
-        else:
-            st.markdown(f"**SyntaxError:** Parece que escribiste algo incorrecto. Asegúrate de usar `print('¡Hola Mundo!')` en tu código.")
+    ###
 
     # Encabezado
     st.markdown(f'<h2 style="font-size: 30px; text-align: center; ">¿Qué está ocurriendo aquí?</h2>', unsafe_allow_html=True)
