@@ -327,14 +327,10 @@ elif opciones == "Mi primer código en Python":
                 st.divider()
     
                 if st.button("Ver solución"):
-                    
                     st.code("""
-                    print("Gomez")
-                        
+                    print("Gomez")     
                     print(20 + 26)
-                        
                     help(type)
-                        
                     """, language="python")
 
     show_info()
