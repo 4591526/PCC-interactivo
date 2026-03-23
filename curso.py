@@ -237,20 +237,20 @@ elif opciones == "Mi primer código en Python":
     """)
     st.divider() ## Separador
     
-    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Función print() ▶️</h2>', unsafe_allow_html=True)
+    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E4E8A">Función print() ▶️</h2>', unsafe_allow_html=True)
     st.code("print('¡Hola Mundo!')", language='python')
     st.markdown(f"La función `print()` permite mostrar la información en la pantalla.")
 
-    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Función help() 🆘</h2>', unsafe_allow_html=True)
+    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E4E8A">Función help() 🆘</h2>', unsafe_allow_html=True)
     st.code("help(print)", language="python")
     st.markdown(f"Esta función permite consultar en la documentación de Python.")
 
-    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">¿Cómo escribir comentarios? #️⃣</h2>', unsafe_allow_html=True)
+    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E4E8A">¿Cómo escribir comentarios? #️⃣</h2>', unsafe_allow_html=True)
     st.code("""# Este es un comentario
     print("Hola")
     """, language="python")
 
-    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Errores en Python ❌</h2>', unsafe_allow_html=True)
+    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E4E8A">Errores en Python ❌</h2>', unsafe_allow_html=True)
     st.code("print(Hola)", language="python")
     st.markdown(f"Esto genera un error porque faltan comillas.")
 
@@ -272,7 +272,77 @@ elif opciones == "Mi primer código en Python":
              
     """, unsafe_allow_html=True)
 
+    col22, col23, col24 = st.columns([1,2,1])
 
+    with col23:
+    
+        if st.button("Resolver ejercicios"):
+            
+            @st.dialog("Ejercicios: Primer programa en Python")
+            def show_info():
+                
+                st.header("Quiz rápido")
+    
+                p1 = st.radio(
+                    "1. ¿Qué función permite mostrar texto en pantalla?",
+                    ["input()", "print()", "help()", "show()"],
+                    key="p1"
+                )
+    
+                p2 = st.radio(
+                    "2. ¿Cómo consultamos ayuda sobre una función?",
+                    ["info()", "help()", "doc()", "manual()"],
+                    key="p2"
+                )
+    
+                p3 = st.radio(
+                    "3. ¿Cómo se escribe un comentario?",
+                    ["// comentario", "# comentario", "/* comentario */"],
+                    key="p3"
+                )
+    
+                p4 = st.radio(
+                    "4. ¿Qué error hay aquí?\n\n print(Hola)",
+                    ["SyntaxError", "NameError", "TypeError"],
+                    key="p4"
+                )
+    
+                st.divider()
+    
+                col25, col26, col27 = st.columns([1,2,1])
+    
+                with col26:
+    
+                    if st.button("Revisar respuestas"):
+                        
+                        puntaje = 0
+    
+                        if p1 == "print()":
+                            puntaje += 1
+    
+                        if p2 == "help()":
+                            puntaje += 1
+    
+                        if p3 == "# comentario":
+                            puntaje += 1
+    
+                        if p4 == "NameError":
+                            puntaje += 1
+    
+                        st.subheader(f"Puntaje: {puntaje}/4")
+    
+                        if puntaje == 4:
+                            st.success("Excelente")
+                            st.balloons()
+    
+                        elif puntaje >= 2:
+                            st.info("Vas bien")
+    
+                        else:
+                            st.warning("Revisa el material y vuelve a intentar")
+    
+            show_info()
+            
 if opciones == "Variables":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Variables en Python</h2>', unsafe_allow_html=True)
     
