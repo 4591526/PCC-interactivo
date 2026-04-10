@@ -369,6 +369,14 @@ elif opciones == "Mi primer código en Python":
             
 if opciones == "Variables":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Variables en Python</h2>', unsafe_allow_html=True)
+    # Explicación
+    st.write("""
+        En Python, una variable es un espacio que almacena un valor. Para asignar un valor a una variable, usamos el símbolo `=`. 
+        Por ejemplo, `numero = 14` asigna el valor `14` a la variable `numero`. Recuerda que el nombre de la variable puede ser cualquier palabra, pero no puede comenzar con un número. 
+        Además, no puede contener espacios ni caracteres especiales. Revisa las palabras reservadas de Python para asegurarte de que el nombre de tu variable no sea una palabra reservada: 
+        [Palabras reservadas en Python.](https://www.w3schools.com/python/python_ref_keywords.asp) 
+        Los valores pueden ser cadena de caracteres, enteros, flotantes, booleanos, listas, etc.
+        """, unsafe_allow_html=True)
     
     # Insertar vido
     st.video("https://youtu.be/wDqPp41z90E")
@@ -397,14 +405,6 @@ if opciones == "Variables":
     """
     st.code(codigo_13, language = 'python')
 
-    # Display the graph in Streamlit
-    st.write("""
-        En Python, una variable es un espacio que almacena un valor. Para asignar un valor a una variable, usamos el símbolo `=`. 
-        Por ejemplo, `numero = 14` asigna el valor `14` a la variable `numero`. Recuerda que el nombre de la variable puede ser cualquier palabra, pero no puede comenzar con un número. 
-        Además, no puede contener espacios ni caracteres especiales. Revisa las palabras reservadas de Python para asegurarte de que el nombre de tu variable no sea una palabra reservada: 
-        [Palabras reservadas en Python.](https://www.w3schools.com/python/python_ref_keywords.asp) 
-        Los valores pueden ser cadena de caracteres, enteros, flotantes, booleanos, listas, etc.
-        """, unsafe_allow_html=True)
 
 if opciones == "Tipos de datos":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Tipos de datos en Python</h2>', unsafe_allow_html=True)
