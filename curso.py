@@ -747,17 +747,26 @@ if opciones == "Listas":
 
 
 if opciones == "Expresiones booleanas":
-    st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Expresiones booleanas en Python</h2>', unsafe_allow_html=True)
-            
-    # Breve explicación de las expresiones booleanas
-    st.write("""
-        Las expresiones booleanas son expresiones que pueden ser verdaderas (`True`) o falsas (`False`). 
-        Se utilizan en condiciones y comparaciones para tomar decisiones en el código. 
-        En Python, las expresiones booleanas se evaluan con operadores comparativos, de pertenencia y lógicos.
-        """, unsafe_allow_html=True)
+    st.markdown('<h2 style="font-size: 42px; text-align: center;">⚖️ Expresiones booleanas en Python</h2>', unsafe_allow_html=True)
 
-    st.markdown(f'<h3 style="font-size: 42px; text-align: center; ">Operadores comparativos</h3>', unsafe_allow_html=True)
-    # Crear tablas de cada tipo de operadores
+    # Explicación
+    st.markdown("""
+    Las **expresiones booleanas** son aquellas que solo pueden tener dos valores:  
+    <b>True</b> (verdadero) o <b>False</b> (falso).
+    
+    Se utilizan principalmente en **condiciones y comparaciones** para tomar decisiones en un programa.
+    
+    En Python, estas expresiones se construyen usando:
+    - Operadores **comparativos**
+    - Operadores de **pertenencia**
+    - Operadores **lógicos**
+    """, unsafe_allow_html=True)
+    
+    st.markdown("---")
+    
+    # 🔹 Operadores comparativos
+    st.markdown('<h3 style="text-align: center;">🔍 Operadores comparativos</h3>', unsafe_allow_html=True)
+    
     operadores_comparativos = {
         "Operador": ["==", "!=", ">", "<", ">=", "<="],
         "Descripción": [
@@ -767,64 +776,71 @@ if opciones == "Expresiones booleanas":
             "Menor que",
             "Mayor o igual que",
             "Menor o igual que"
-        ],        
+        ],
         "Ejemplo": [
-                "5 == 5",
-                "5 != 3",  
-                "7 > 3",   
-                "3 < 7",  
-                "3 >= 5",  
-                "3 <= 5"  
-            ]
-        }
+            "5 == 5 → True",
+            "5 != 3 → True",
+            "7 > 3 → True",
+            "3 < 7 → True",
+            "3 >= 5 → False",
+            "3 <= 5 → True"
+        ]
+    }
     
-    # Convertir a DataFrame
-    df_operadores_comparativos = pd.DataFrame(operadores_comparativos)
+    st.dataframe(pd.DataFrame(operadores_comparativos), use_container_width=True)
     
-    # Mostrar en Streamlit
-    st.dataframe(df_operadores_comparativos)
+    st.markdown("---")
     
-    st.markdown(f'<h3 style="font-size: 42px; text-align: center; ">Operadores de pertenencia</h3>', unsafe_allow_html=True)
-    # Crear tablas de cada tipo de operadores
+    # 🔹 Operadores de pertenencia
+    st.markdown('<h3 style="text-align: center;">📦 Operadores de pertenencia</h3>', unsafe_allow_html=True)
+    
     operadores_pertenencia = {
-            "Operador": ["in", "not in"],
-            "Descripción": [
-                "Verifica si un elemento está presente en una lista o cadena",
-                "Verifica si un elemento no está presente en una lista o cadena"
-            ],        
-            "Ejemplo": [
-                    "'a' in 'manzana'",
-                    "'b' not in 'manzana'"
-            ]
-        }
-        
-    # Convertir a DataFrame
-    df_operadores_pertenencia = pd.DataFrame(operadores_pertenencia)
-        
-        # Mostrar en Streamlit
-    st.dataframe(df_operadores_pertenencia)
-        
-    st.markdown(f'<h3 style="font-size: 42px; text-align: center; ">Operadores lógicos</h3>', unsafe_allow_html=True)
-    # Crear tablas de cada tipo de operadores
+        "Operador": ["in", "not in"],
+        "Descripción": [
+            "Verifica si un elemento está dentro de una secuencia",
+            "Verifica si un elemento no está dentro de una secuencia"
+        ],
+        "Ejemplo": [
+            "'a' in 'manzana' → True",
+            "'b' not in 'manzana' → True"
+        ]
+    }
+    
+    st.dataframe(pd.DataFrame(operadores_pertenencia), use_container_width=True)
+    
+    st.markdown("---")
+    
+    # 🔹 Operadores lógicos
+    st.markdown('<h3 style="text-align: center;">🧠 Operadores lógicos</h3>', unsafe_allow_html=True)
+    
     operadores_logicos = {
-                "Operador": ["and", "or", "not"],
-                "Descripción": [
-                    "Devuelve True si ambas expresiones son verdaderas",
-                    "Devuelve True si al menos una expresión es verdadera",
-                    "Devuelve True si la expresión es falsa"
-                ],        
-                "Ejemplo": [
-                    "(5 > 3) and (7 > 5)",
-                    "(5 > 3) or (7 < 5)",
-                    "not(5 > 3)"
-                ]
-        }
-        
-        # Convertir a DataFrame
-    df_operadores_logicos = pd.DataFrame(operadores_logicos)
-        
-        # Mostrar en Streamlit
-    st.dataframe(df_operadores_logicos)
+        "Operador": ["and", "or", "not"],
+        "Descripción": [
+            "True si ambas condiciones son verdaderas",
+            "True si al menos una condición es verdadera",
+            "Invierte el valor lógico"
+        ],
+        "Ejemplo": [
+            "(5 > 3) and (7 > 5) → True",
+            "(5 > 3) or (7 < 5) → True",
+            "not (5 > 3) → False"
+        ]
+    }
+    
+    st.dataframe(pd.DataFrame(operadores_logicos), use_container_width=True)
+    
+    st.markdown("---")
+    
+    # 🔹 Mini interacción
+    st.markdown("### ⚙️ Prueba tú mismo")
+    
+    a = st.number_input("Valor de a:", value=5)
+    b = st.number_input("Valor de b:", value=3)
+    
+    st.write("a > b:", a > b)
+    st.write("a == b:", a == b)
+    st.write("a < b:", a < b)
+    st.write("(a > b) and (b > 0):", (a > b) and (b > 0))
 
 if opciones == "Declaraciones condicionales":
     st.markdown(f'<h2 style="font-size: 40px; text-align: center; ">Declaraciones condicionales: if-elif-else</h2>', unsafe_allow_html=True)
