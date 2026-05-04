@@ -534,66 +534,66 @@ if opciones == "Tipos de datos":
             st.write("Valor:", valor)
 
 if opciones == "Operadores aritméticos":
-    st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Operadores aritméticos en Python</h2>', unsafe_allow_html=True)
+    st.markdown('<h2 style="font-size: 42px; text-align: center;">🧮 Operadores aritméticos en Python</h2>', unsafe_allow_html=True)
 
-    # Breve explicación de los operadores en una tabla con Streamlit
+    # Explicación
+    st.markdown("""
+    Los <b>operadores aritméticos</b> permiten realizar operaciones matemáticas entre valores.
+    """, unsafe_allow_html=True)
 
-        # Crear un diccionario con los operadores y su descripción
+    # Tabla de operadores
     operadores = {
-            "Operador": ["+", "-", "*", "/", "//", "%", "**"],
-            "Descripción": [
-                "Suma",
-                "Resta",
-                "Multiplicación",
-                "División",
-                "División entera",
-                "Módulo (resto de la división)",
-                "Potencia"
-            ]
-        }
-        
-        # Convertir a DataFrame
+        "Operador": ["+", "-", "*", "/", "//", "%", "**"],
+        "Nombre": [
+            "Suma",
+            "Resta",
+            "Multiplicación",
+            "División",
+            "División entera",
+            "Módulo",
+            "Potencia"
+        ],
+        "Ejemplo": [
+            "3 + 2 → 5",
+            "3 - 2 → 1",
+            "3 * 2 → 6",
+            "3 / 2 → 1.5",
+            "3 // 2 → 1",
+            "3 % 2 → 1",
+            "3 ** 2 → 9"
+        ]
+    }
+
     df_operadores = pd.DataFrame(operadores)
-        
-        # Mostrar en Streamlit
-    st.dataframe(df_operadores)
+    st.dataframe(df_operadores, use_container_width=True)
 
-    # Agregar ejemplos con variables
-    st.markdown(f'<h3 style="font-size: 30px; text-align: center; ">Ejemplos con operadores aritméticos</h3>', unsafe_allow_html=True)
+    # Parte interactiva
+    st.markdown("### ⚙️ Prueba tú mismo")
 
-    # Código de ejemplo
-    codigo_4 = """
-        # Variables de diferentes tipos
-        nombre = "Liam"  # Variable de tipo str
-        apellido = "Payne"  # Variable de tipo str
+    num1 = st.number_input("Ingresa el primer número:", value=10.0)
+    num2 = st.number_input("Ingresa el segundo número:", value=2.0)
 
-        edad = 25         # Variable de tipo int
+    operacion = st.selectbox(
+        "Elige una operación:",
+        ["+", "-", "*", "/", "//", "%", "**"]
+    )
 
-        altura = 1.68     # Variable de tipo float
+    if operacion == "+":
+        resultado = num1 + num2
+    elif operacion == "-":
+        resultado = num1 - num2
+    elif operacion == "*":
+        resultado = num1 * num2
+    elif operacion == "/":
+        resultado = num1 / num2 if num2 != 0 else "Error (división por cero)"
+    elif operacion == "//":
+        resultado = num1 // num2 if num2 != 0 else "Error (división por cero)"
+    elif operacion == "%":
+        resultado = num1 % num2 if num2 != 0 else "Error (división por cero)"
+    elif operacion == "**":
+        resultado = num1 ** num2
 
-        # Operaciones con variables
-        suma = edad + 5           # Suma
-        multiplicacion = altura * 2  # Multiplicación
-        nombre_completo = nombre + apellido  # Concatenación de strings
-
-        # Imprimir resultados
-        print("Suma:", suma)
-        print("Multiplicación:", multiplicacion)
-        print("Usuario:", nombre_completo)
-        """
-
-# Mostrar el código en un bloque con resaltado de sintaxis
-    st.code(codigo_4, language='python')
-
-    # Explicación del ejemplo
-    st.write("""
-        En este ejemplo:
-        - `nombre` y `apellido` son variables del tipo **str** que almacenan una cadena de caracteres cada una.
-        - `edad` es una variable de tipo **int** que almacena un número entero.
-        - `altura` es una variable de tipo **float** que almacena un número decimal.
-        - Se realizan operaciones aritméticas como suma y multiplicación con las variables `edad` y `altura`.
-        - Se realiza una concatenación de cadenas con las variables `nombre` y `apellido`.
-        """)
+    st.success(f"Resultado: {resultado}")
 
 if opciones == "Cadena de caracteres":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Cadena de caracteres (str)</h2>', unsafe_allow_html=True)
