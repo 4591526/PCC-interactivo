@@ -500,30 +500,41 @@ if opciones == "Tipos de datos":
         # Mostrar en Streamlit
     st.graphviz_chart(data_types_graph)
 
-# Breve explicación de los tipos de datos
-    st.write("""
-        - **String (str)**: Son cadenas de caracteres que contienen letras, números y símbolos. En una conversión solo los caracteres numéricos se convierten en integer o float.
-        - **Integer (int)**: Son números enteros, como `7` o `-3`. Estos pueden convertirse a float, pero no al revés. 
-        - **Float (float)**: Son números decimales, como `3.14` o `-0.5`. Estos pueden convertirse a int, pero se pierde la parte decimal.
-        - **Boolean (bool)**: Valores de verdad, que pueden ser `True` o `False`. Estos son útiles para condiciones y comparaciones.
-        """, unsafe_allow_html=True)
-    # Ejemplos de cada tipo de dato con variables
-    st.markdown(f'<h3 style="font-size: 30px; text-align: center; ">Ejemplos de tipos de datos</h3>', unsafe_allow_html=True)
+    # Breve explicación de los tipos de datos
+    st.markdown("""
+    <h3>📌 Tipos de datos básicos</h3>
 
-    codigo_3 = """
-        # Variables de diferentes tipos de datos
-        curso = "Python"  # Cadena de caracteres (str)
-        ciclo = 2025         # Número entero (int)
-        crédito = 3.5         # Número decimal (float)
+    <ul>
+        <li><b>String (str)</b>: Cadenas de caracteres que contienen letras, números o símbolos. 
+        Ejemplo: <code>"Hola"</code>. Solo los caracteres numéricos pueden convertirse a <code>int</code> o <code>float</code>.</li>
 
-        # Imprimir los tipos de datos
-        print("Tipo de dato de curso:", type(curso))
-        print("Tipo de dato de ciclo:", type(ciclo))
-        print("Tipo de dato de crédito:", type(crédito))
-        """
-        # Mostrar el código en un bloque con resaltado de sintaxis
-    st.code(codigo_3, language='python')
+        <li><b>Integer (int)</b>: Números enteros, como <code>7</code> o <code>-3</code>. 
+        Pueden convertirse a <code>float</code>.</li>
 
+        <li><b>Float (float)</b>: Números decimales, como <code>3.14</code> o <code>-0.5</code>. 
+        Pueden convertirse a <code>int</code>, pero <b>se pierde la parte decimal</b>.</li>
+
+        <li><b>Boolean (bool)</b>: Valores de verdad: <code>True</code> o <code>False</code>. 
+        Se usan en condiciones y comparaciones.</li>
+    </ul>
+    """, unsafe_allow_html=True)
+
+    st.markdown("---")
+
+    # Parte interactiva simple
+    st.markdown("### ⚙️ Prueba tú mismo")
+
+    valor = st.text_input("Escribe un valor (ejemplo: 10, 3.5, 'Hola', True):")
+
+    if valor:
+        try:
+            evaluado = eval(valor)
+            st.success(f"Tipo de dato: {type(evaluado)}")
+            st.write("Valor interpretado:", evaluado)
+        except:
+            st.warning("No se pudo interpretar automáticamente. Se considera texto.")
+            st.write("Tipo de dato:", type(valor))
+            st.write("Valor:", valor)
 
 if opciones == "Operadores aritméticos":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Operadores aritméticos en Python</h2>', unsafe_allow_html=True)
