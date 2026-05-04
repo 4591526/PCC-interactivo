@@ -368,43 +368,92 @@ elif opciones == "Mi primer código en Python":
             show_info()
             
 if opciones == "Variables":
-    st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Variables en Python</h2>', unsafe_allow_html=True)
+    st.markdown(f'<h2 style="font-size: 42px; text-align: center; "> 🧩 Variables en Python</h2>', unsafe_allow_html=True)
     # Explicación
     st.write("""
-        En Python, una variable es un espacio que almacena un valor. Para asignar un valor a una variable, usamos el símbolo `=`. 
-        Por ejemplo, `numero = 14` asigna el valor `14` a la variable `numero`. Recuerda que el nombre de la variable puede ser cualquier palabra, pero no puede comenzar con un número. 
-        Además, no puede contener espacios ni caracteres especiales. Revisa las palabras reservadas de Python para asegurarte de que el nombre de tu variable no sea una palabra reservada: 
-        [Palabras reservadas en Python.](https://www.w3schools.com/python/python_ref_keywords.asp) 
-        Los valores pueden ser cadena de caracteres, enteros, flotantes, booleanos, listas, etc.
-        """, unsafe_allow_html=True)
-    
-    # Insertar vido
-    st.video("https://youtu.be/wDqPp41z90E")
+    En Python, una **variable** es un espacio donde almacenamos información (un valor) para poder usarla después en nuestro programa.
+    Para asignar un valor a una variable utilizamos el símbolo `=`:
+    `numero = 14`
+    En este caso, la variable `numero` guarda el valor `14`.
+
+    ### 📌 Reglas para nombrar variables
+    - Pueden contener letras, números y guiones bajos (`_`).  
+    - **No pueden comenzar con un número**.  
+    - **No pueden tener espacios**.  
+    - No deben usar **caracteres especiales** (como `@`, `#`, `!`, etc.).  
+    - No pueden ser **palabras reservadas de Python** (como `if`, `for`, `while`, etc.).  
+
+    Puedes revisar la lista completa aquí:  
+    [Palabras reservadas en Python](https://www.w3schools.com/python/python_ref_keywords.asp)
+    """, unsafe_allow_html=True)
 
     # Ejemplos de creación de variables
-    st.markdown(f'<h3 style="font-size: 30px; text-align: center; ">Ejemplos de variables</h3>', unsafe_allow_html=True)
-
-    codigo_13 = """
-    # Sintaxis: nombre_variable = valor
-    # nombre_variable es la etiqueta
-    # = es la asignación
-    # valor es cualquier tipo de dato de Python
-
-    # Creamos una variable sin error de nombre
-    perro = "guau"
+    st.markdown('<h3 style="font-size: 30px; text-align: center;">Ejemplos de variables</h3>', unsafe_allow_html=True)
+    
+    st.markdown("""
+    Explora cómo funcionan las variables en Python. Puedes escribir valores y ver cómo cambian.
+    """)
+    
+    # Input interactivo
+    nombre_variable = st.text_input("Escribe un nombre para tu variable:", value="animal")
+    valor_variable = st.text_input("Asigna un valor a tu variable:", value="perro")
+    
+    # Mostrar resultado dinámico
+    if nombre_variable:
+        st.markdown("### Resultado")
+        st.code(f"{nombre_variable} = '{valor_variable}'\nprint({nombre_variable})", language="python")
+        st.write("Salida:")
+        st.write(valor_variable)
+    
+    st.markdown("---")
+    
+    # Explicación de reasignación
+    st.markdown("### 🔁 Reasignación de variables")
+    
+    valor1 = st.text_input("Primer valor de la variable:", value="guau", key="v1")
+    valor2 = st.text_input("Nuevo valor de la variable:", value="sonido del perro", key="v2")
+    
+    st.code(f"""
+    perro = "{valor1}"
     print(perro)
-
-    # Error de nombre: antes de ejecutar el nombre de una posible variable 
-    # debes crearla y asignarle un valor
+    
+    perro = "{valor2}"
+    print(perro)
+    """, language="python")
+    
+    st.write("Salida:")
+    st.write(valor1)
+    st.write(valor2)
+    
+    st.markdown("""
+    💡 **Observa:** la variable guarda siempre el **último valor asignado**.
+    """)
+    
+    st.markdown("---")
+    
+    # Simulación de error
+    st.markdown("### ⚠️ Error común")
+    
+    st.markdown("""
+    Si intentas usar una variable que no ha sido definida, obtendrás un error:
+    """)
+    
+    st.code("""
     print(gato)
-
-    # ¿Cuál sería el valor de la variable perro "guau" o "sonido de perro"?
-    perro = "sonido del perro"
-    print(perro) 
-    # Las variables conservan el último valor asignado a la variable
-    """
-    st.code(codigo_13, language = 'python')
-
+    """, language="python")
+    
+    st.error("NameError: name 'gato' is not defined")
+    
+    st.markdown("""
+    💡 **Recuerda:** primero debes crear la variable antes de usarla.
+    """)
+    
+    # VIDEO
+    st.markdown(f'<h2 style="font-size: 30px; text-align: center; color: #4E8A4E">Video: Variables </h2>', unsafe_allow_html=True)
+    col25, col26, col27 = st.columns([1,1.5,1])
+    with col26:
+    # Insertar un video explicativo
+        st.video("https://youtu.be/wDqPp41z90E")
 
 if opciones == "Tipos de datos":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Tipos de datos en Python</h2>', unsafe_allow_html=True)
