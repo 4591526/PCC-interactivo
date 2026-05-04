@@ -368,7 +368,7 @@ elif opciones == "Mi primer código en Python":
             show_info()
             
 if opciones == "Variables":
-    st.markdown(f'<h2 style="font-size: 42px; text-align: center; "> 🧩 Variables en Python</h2>', unsafe_allow_html=True)
+    st.markdown(f'<h2 style="font-size: 40px; text-align: center; color: #4E4E8A">🧩 Variables en Python</h2>', unsafe_allow_html=True)
     # Explicación
     st.write("""
     En Python, una **variable** es un espacio donde almacenamos información (un valor) para poder usarla después en nuestro programa.
@@ -383,12 +383,11 @@ if opciones == "Variables":
     - No deben usar **caracteres especiales** (como `@`, `#`, `!`, etc.).  
     - No pueden ser **palabras reservadas de Python** (como `if`, `for`, `while`, etc.).  
 
-    Puedes revisar la lista completa aquí:  
-    [Palabras reservadas en Python](https://www.w3schools.com/python/python_ref_keywords.asp)
+    Puedes revisar la lista completa aquí: [Palabras reservadas en Python](https://www.w3schools.com/python/python_ref_keywords.asp)
     """, unsafe_allow_html=True)
 
     # Ejemplos de creación de variables
-    st.markdown('<h3 style="font-size: 30px; text-align: center;">Ejemplos de variables</h3>', unsafe_allow_html=True)
+    st.markdown('f'<h3 style="font-size: 28px; text-align: center; color: #4E8A4E">Ejemplos de variables</h3>', unsafe_allow_html=True)
     
     st.markdown("""
     Explora cómo funcionan las variables en Python. Puedes escribir valores y ver cómo cambian.
