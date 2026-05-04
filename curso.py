@@ -596,54 +596,74 @@ if opciones == "Operadores aritméticos":
     st.success(f"Resultado: {resultado}")
 
 if opciones == "Cadena de caracteres":
-    st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Cadena de caracteres (str)</h2>', unsafe_allow_html=True)
+    st.markdown('<h2 style="font-size: 42px; text-align: center;">🔤 Cadena de caracteres (str)</h2>', unsafe_allow_html=True)
 
+    # Explicación breve
+    st.markdown("""
+    Una <b>cadena de caracteres</b> (<code>str</code>) es un tipo de dato que permite almacenar texto.
+    Puede incluir letras, números y símbolos, y se define usando comillas simples (<code>' '</code>) o dobles (<code>" "</code>).
+    """, unsafe_allow_html=True)
 
-    st.code("texto = 'El 22 de febrero se nos anunció que regresaríamos a Colombia.' \nprint(texto)", language='python')
+    # Ejemplo básico
+    st.code("""texto = "El 22 de febrero se nos anunció que regresaríamos a Colombia."
+    print(texto)""", language='python')
 
-    # Ejemplos de algunos métodos de cadenas de caracteres
-    st.markdown(f'<h3 style="font-size: 30px; text-align: center; ">Ejemplos de métodos con cadenas de caracteres</h3>', unsafe_allow_html=True)
-    codigo_5 = """
-    # Definición de una cadena de caracteres
+    st.markdown("---")
+
+    # Métodos de strings
+    st.markdown('<h3 style="font-size: 30px; text-align: center;">🛠️ Métodos de cadenas de caracteres</h3>', unsafe_allow_html=True)
+
+    codigo_3 = """
+    # Definición de una cadena
     texto = "El 22 de febrero se nos anunció que regresaríamos a Colombia."
-    print("Texto original:", texto)   
+    print("Texto original:", texto)
+    
+    # Mayúsculas y minúsculas
+    print("Mayúsculas:", texto.upper())
+    print("Minúsculas:", texto.lower())
+    
+    # Longitud del texto
+    print("Cantidad de caracteres:", len(texto))
+    
+    # Contar palabras o caracteres
+    print("Veces que aparece 'Colombia':", texto.count("Colombia"))
+    
+    # Reemplazar texto
+    print("Reemplazo:", texto.replace("Colombia", "Perú"))
+    
+    # Convertir a lista
+    print("Lista de palabras:", texto.split())
+    
+    # Verificaciones
+    print("¿Empieza con 'El'?", texto.startswith("El"))
+    print("¿Termina con 'Colombia.'?", texto.endswith("Colombia."))
+    """
+    st.code(codigo_3, language='python')
 
-    # Convertir a mayúsculas
-    texto_mayusculas = texto.upper()
-    print("Texto en mayúsculas:", texto_mayusculas)
+    st.markdown("---")
 
-    # Convertir a minúsculas
-    texto_minusculas = texto.lower()
-    print("Texto en minúsculas:", texto_minusculas)
+    # Parte interactiva
+    st.markdown("### ⚙️ Prueba tú mismo")
 
-    # Contar la cantidad de caracteres
-    cantidad_caracteres = len(texto)
-    print("Cantidad de caracteres:", cantidad_caracteres)
+    texto_usuario = st.text_area("Escribe un texto:")
 
-    # Contar la cantidad de veces que aparece una palabra
-    cantidad_veces = texto.count("Colombia")
-    print("Cantidad de veces que aparece 'Colombia':", cantidad_veces)
+    if texto_usuario:
+        st.write("🔍 Resultados:")
+        st.write("Mayúsculas:", texto_usuario.upper())
+        st.write("Minúsculas:", texto_usuario.lower())
+        st.write("Cantidad de caracteres:", len(texto_usuario))
 
-    # Reemplazar una palabra por otra
-    cambio_texto = texto.replace("Colombia", "Perú")
-    print("Texto después de reemplazar 'Colombia' por 'Perú':", cambio_texto)
+        palabra = st.text_input("Palabra a buscar:", key="buscar")
+        if palabra:
+            st.write(f"Veces que aparece '{palabra}':", texto_usuario.count(palabra))
 
-    # Convertir a una lista de palabras
-    lista_palabras = texto.split()
-    print("Lista de palabras:", lista_palabras)
+        reemplazo = st.text_input("Reemplazar palabra (formato: original,nuevo):", key="reemplazo")
+        if reemplazo and "," in reemplazo:
+            original, nuevo = reemplazo.split(",", 1)
+            st.write("Texto reemplazado:", texto_usuario.replace(original.strip(), nuevo.strip()))
 
-    # Verificar si empieza con un caractero o palabra específica
-    empieza_con = texto.startswith("El")
-    print("¿Empieza con 'El'?:", empieza_con)
-
-    # Verificar si termina con un caractero o palabra específica
-    termina_con = texto.endswith("Colombia.")
-    print("¿Termina con 'Colombia.'?:", termina_con)
-        """
-        # Mostrar el código en un bloque con resaltado de sintaxis
-    st.code(codigo_5, language='python')
+        st.write("Lista de palabras:", texto_usuario.split())
         
-
 if opciones == "Listas":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Listas (list)</h2>', unsafe_allow_html=True)
 
