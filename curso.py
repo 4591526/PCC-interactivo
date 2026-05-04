@@ -507,13 +507,10 @@ if opciones == "Tipos de datos":
     <ul>
         <li><b>String (str)</b>: Cadenas de caracteres que contienen letras, números o símbolos. 
         Ejemplo: <code>"Hola"</code>. Solo los caracteres numéricos pueden convertirse a <code>int</code> o <code>float</code>.</li>
-
         <li><b>Integer (int)</b>: Números enteros, como <code>7</code> o <code>-3</code>. 
         Pueden convertirse a <code>float</code>.</li>
-
         <li><b>Float (float)</b>: Números decimales, como <code>3.14</code> o <code>-0.5</code>. 
         Pueden convertirse a <code>int</code>, pero <b>se pierde la parte decimal</b>.</li>
-
         <li><b>Boolean (bool)</b>: Valores de verdad: <code>True</code> o <code>False</code>. 
         Se usan en condiciones y comparaciones.</li>
     </ul>
