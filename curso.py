@@ -657,79 +657,92 @@ if opciones == "Cadena de caracteres":
         if reemplazo and "," in reemplazo:
             original, nuevo = reemplazo.split(",", 1)
             st.write("Texto reemplazado:", texto_usuario.replace(original.strip(), nuevo.strip()))
-
-        st.write("Lista de palabras:", texto_usuario.split())
         
 if opciones == "Listas":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Listas (list)</h2>', unsafe_allow_html=True)
 
-    st.code("comunicaciones = ['comunicación audiovisual', 'periodismo', 'comunicación para el desarrollo', 'publicidad'] \nprint(comunicaciones)", language='python')
-    # Breve explicación de las listas
-    st.write("""
-        Las listas son estructuras de datos que permiten almacenar múltiples elementos en una sola variable. 
-        Se definen utilizando corchetes `[]` y los elementos se separan por comas. 
-        Las listas pueden contener diferentes tipos de datos, como números, cadenas de texto y otras listas.
-        """, unsafe_allow_html=True)
+    # Ejemplo básico
+    st.code("""comunicaciones = ["comunicación audiovisual", "periodismo", "comunicación para el desarrollo", "publicidad"]
+    print(comunicaciones)""", language='python')
     
-    # Ejemplo de lista en formato código
-    st.markdown(f'<h3 style="font-size: 30px; text-align: center; ">Ejemplo de métodos con listas</h3>', unsafe_allow_html=True)
+    # Explicación
+    st.markdown("""
+    Las **listas** son estructuras de datos que permiten almacenar múltiples elementos en una sola variable.
     
-    codigo_6 = """
+    - Se definen con corchetes: `[]`  
+    - Los elementos se separan por comas  
+    - Pueden contener distintos tipos de datos (números, texto, incluso otras listas)  
+    - Son **mutables**, es decir, se pueden modificar después de su creación  
+    """)
+    
+    # Métodos
+    st.markdown('<h3 style="font-size: 30px; text-align: center;">🛠️ Métodos y operaciones con listas</h3>', unsafe_allow_html=True)
+
+    codigo_4 = """
     # Definición de una lista
     frutas = ["manzana", "banana", "naranja", "uva"]
-
-    # Acceder a elementos de la lista
-    print("Primera fruta:", frutas[0])  # Accede al primer elemento
-    print("Última fruta:", frutas[-1])  # Accede al último elemento
-
-    # Modificar un elemento de la lista
+    
+    # Acceder a elementos
+    print("Primera fruta:", frutas[0])
+    print("Última fruta:", frutas[-1])
+    
+    # Modificar un elemento
     frutas[1] = "pera"
     print("Lista modificada:", frutas)
-
-    # Acceder al indice de un elemento
+    
+    # Índice de un elemento
     print("Índice de 'naranja':", frutas.index("naranja"))
-
-    # Agregar un nuevo elemento a la lista
+    
+    # Agregar elementos
     frutas.append("mango")
-    print("Lista después de agregar un elemento:", frutas)
-
-    # Eliminar un elemento de la lista
+    print("Después de agregar:", frutas)
+    
+    # Eliminar elementos
     frutas.remove("naranja")
-    print("Lista después de eliminar un elemento:", frutas)
-
-    # Ordenar los elementos de una lista 
+    print("Después de eliminar:", frutas)
+    
+    # Ordenar lista
     numeros = [5, 2, 9, 1, 7]
     numeros.sort()
-    print("Lista ordenada:", numeros)
-
-    # Ordenar de manera inversa 
+    print("Ordenada:", numeros)
+    
     numeros.sort(reverse=True)
-    print("Lista ordenada de manera inversa:", numeros)
-
-    # Crear una lista vacía
-    lista_vacia = []
-    print("Lista vacía:", lista_vacia)
-
-    lista_vacia_2 = list()
-    print("Lista vacía 2:", lista_vacia_2)
-
-    # Contar la cantidad de elementos en una lista
-    cantidad_elementos = len(frutas)
-    print("Cantidad de elementos en la lista:", cantidad_elementos)
-
+    print("Orden inverso:", numeros)
+    
+    # Longitud
+    print("Cantidad de elementos:", len(frutas))
     """
-
-   # Mostrar el código en un bloque con resaltado de sintaxis
-    st.code(codigo_6, language='python')
-
-    # Explicación del ejemplo
-    st.write("""
-    En este ejemplo:
-    - Se define una lista llamada `frutas` que contiene cuatro elementos.
-    - Se accede a elementos específicos de la lista utilizando índices.
-    - Se modifica un elemento de la lista reemplazando `"banana"` por `"pera"`.
-    - Se agrega un nuevo elemento `"mango"` al final de la lista utilizando el método `append()`.
-    - Se elimina el elemento `"naranja"` de la lista utilizando el método `remove()`.
+    st.code(codigo_4, language='python')
+    
+    st.markdown("---")
+    
+    # Parte interactiva
+    st.markdown("### ⚙️ Prueba tú mismo")
+    
+    lista_usuario = st.text_input("Escribe elementos separados por comas:", value="manzana, banana, naranja")
+    
+    if lista_usuario:
+        lista = [x.strip() for x in lista_usuario.split(",")]
+    
+        st.write("📋 Lista:", lista)
+        st.write("🔢 Cantidad de elementos:", len(lista))
+    
+        if lista:
+            st.write("👉 Primer elemento:", lista[0])
+            st.write("👉 Último elemento:", lista[-1])
+    
+        nuevo = st.text_input("Elemento para agregar:", key="agregar")
+        if nuevo:
+            lista.append(nuevo)
+            st.write("➕ Lista actualizada:", lista)
+    
+        eliminar = st.text_input("Elemento para eliminar:", key="eliminar")
+        if eliminar and eliminar in lista:
+            lista.remove(eliminar)
+            st.write("➖ Lista actualizada:", lista)
+    
+    st.markdown("""
+    💡 **Observa:** las listas son **mutables**, por lo que pueden cambiar durante la ejecución del programa.
     """)
 
 
