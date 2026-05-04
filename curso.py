@@ -2,6 +2,7 @@ import streamlit as st
 from streamlit_monaco import st_monaco
 import pandas as pd
 import graphviz
+import random
 from streamlit_option_menu import option_menu
 
 st.set_page_config(
@@ -899,6 +900,46 @@ if opciones == "Declaraciones condicionales":
     - Dependiendo del resultado, se imprime un mensaje diferente.
     """)
 
+    st.markdown('<h2 style="font-size: 42px; text-align: center;">🎮 Juego: Piedra, Papel o Tijera</h2>', unsafe_allow_html=True)
+
+    st.markdown("""
+    Elige una opción y juega contra la computadora.  
+    Este juego utiliza **condicionales**, **expresiones booleanas** y **aleatoriedad**.
+    """)
+
+    # Opciones del juego
+    opciones_juego = ["Piedra", "Papel", "Tijera"]
+
+    eleccion_usuario = st.selectbox("Elige tu jugada:", opciones_juego)
+
+    if st.button("Jugar"):
+        eleccion_pc = random.choice(opciones_juego)
+
+        st.write(f"🧑 Tú elegiste: **{eleccion_usuario}**")
+        st.write(f"💻 Computadora eligió: **{eleccion_pc}**")
+
+        # Lógica del juego
+        if eleccion_usuario == eleccion_pc:
+            st.info("🤝 ¡Empate!")
+        elif (
+            (eleccion_usuario == "Piedra" and eleccion_pc == "Tijera") or
+            (eleccion_usuario == "Papel" and eleccion_pc == "Piedra") or
+            (eleccion_usuario == "Tijera" and eleccion_pc == "Papel")
+        ):
+            st.success("🎉 ¡Ganaste!")
+        else:
+            st.error("😢 Perdiste")
+
+        st.markdown("---")
+    
+        # Explicación didáctica
+        st.markdown("""
+        💡 **¿Qué estamos usando aquí?**
+        - `random.choice()` para generar una elección aleatoria  
+        - Condicionales `if-elif-else`  
+        - Expresiones booleanas para determinar el ganador  
+        """)
+        
 if opciones == "Bucles":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Bucles for y while</h2>', unsafe_allow_html=True)
 
