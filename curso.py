@@ -653,10 +653,6 @@ if opciones == "Cadena de caracteres":
         st.write("Minúsculas:", texto_usuario.lower())
         st.write("Cantidad de caracteres:", len(texto_usuario))
 
-        palabra = st.text_input("Palabra a buscar:", key="buscar")
-        if palabra:
-            st.write(f"Veces que aparece '{palabra}':", texto_usuario.count(palabra))
-
         reemplazo = st.text_input("Reemplazar palabra (formato: original,nuevo):", key="reemplazo")
         if reemplazo and "," in reemplazo:
             original, nuevo = reemplazo.split(",", 1)
