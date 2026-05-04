@@ -387,7 +387,7 @@ if opciones == "Variables":
     """, unsafe_allow_html=True)
 
     # Ejemplos de creación de variables
-    st.markdown('f'<h3 style="font-size: 28px; text-align: center; color: #4E8A4E">Ejemplos de variables</h3>', unsafe_allow_html=True)
+    st.markdown(f'<h3 style="font-size: 28px; text-align: center; color: #4E8A4E">Ejemplos de variables</h3>', unsafe_allow_html=True)
     
     st.markdown("""
     Explora cómo funcionan las variables en Python. Puedes escribir valores y ver cómo cambian.
