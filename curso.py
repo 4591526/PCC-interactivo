@@ -1273,6 +1273,28 @@ if opciones == "Exposiciones de los proyectos 2026-I":
         },
         "Grupo 6 - Proyecto F": {
             "tipo": "sin_entrega"
+        },
+        "Joselyn Luis": {
+            "tipo": "drive",
+            "url": "https://drive.google.com/file/d/1Jy3tUUKQplLOZGgyQj4qtGEVb1RqQYzn/view?usp=sharing"
+        },
+        "Ernesto Silva": {
+            "tipo": "drive",
+            "url": "https://drive.google.com/drive/folders/1eYi1i6LAHCkR7QqSn51cEVSnML8IMPA7?usp=drive_link"
+        },
+        "Ana Ibañez": {
+            "tipo": "canva",
+            "url": "https://canva.link/sekfxj7b57e9oaf"
+        },
+        "Omar Carrasco": {
+            "tipo": "sin_entrega"
+        },
+        "Nicolie Chiroque": {
+            "tipo": "sin_entrega"
+        },
+        "Julia Fabian": {
+            "tipo": "drive",
+            "url": "https://drive.google.com/drive/folders/14FLKStX2HgaO0rHkkw2V84uNkqGXbxPd?usp=sharing"
         }
     }
 
@@ -1291,7 +1313,12 @@ if opciones == "Exposiciones de los proyectos 2026-I":
             "📂 Abrir presentación",
             info["url"]
         )
-
+    elif info["tipo"] == "canva":
+    st.info("🎨 La exposición se encuentra alojada en Canva.")
+    st.link_button(
+        "Abrir presentación en Canva",
+        info["url"]
+    )
     elif info["tipo"] == "sin_entrega":
         st.warning("⚠️ Este grupo no entregó la grabación de su exposición.")
 
