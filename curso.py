@@ -1271,9 +1271,6 @@ if opciones == "Exposiciones de los proyectos 2026-I":
             "tipo": "drive",
             "url": "https://drive.google.com/file/d/17Vfhtdchqdmmr-ePUvWddseSCkB43zb0/view?usp=sharing"
         },
-        "Grupo 6 - Proyecto F": {
-            "tipo": "sin_entrega"
-        },
         "Joselyn Luis": {
             "tipo": "drive",
             "url": "https://drive.google.com/file/d/1Jy3tUUKQplLOZGgyQj4qtGEVb1RqQYzn/view?usp=sharing"
@@ -1320,7 +1317,7 @@ if opciones == "Exposiciones de los proyectos 2026-I":
             info["url"]
         )
     elif info["tipo"] == "sin_entrega":
-        st.warning("⚠️ Este grupo no entregó la grabación de su exposición.")
+        st.warning("⚠️ No entregó la grabación de su exposición.")
 
 st.markdown(""" 
 <hr style="margin-top:40px; margin-bottom:20px;"> 
