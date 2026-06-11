@@ -18,8 +18,7 @@ st.sidebar.title("Pensamiento Computacional")
 with st.sidebar:
     opciones = option_menu("Temas de clase: ",["Introducción","Mi primer código en Python", 
             "Variables", "Tipos de datos", "Operadores aritméticos", "Cadena de caracteres", "Listas", 
-            "Expresiones booleanas", "Declaraciones condicionales", "Bucles", "Diccionarios", "Librerías", "Abrir archivos", 
-                                               "Exposiciones de los proyectos 2026-I"] , 
+            "Expresiones booleanas", "Declaraciones condicionales", "Bucles", "Diccionarios", "Librerías", "Abrir archivos", "Exposiciones de los proyectos 2026-I"] , 
         icons=['0-circle','1-circle', '2-circle', '3-circle', 'calculator', 'alphabet', 'list', '7-circle', '8-circle', '9-circle', 'braces', 
                'collection', 'file-earmark-arrow-up', 'card-checklist'], menu_icon="filetype-py", default_index=13)
 
