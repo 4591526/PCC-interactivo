@@ -18,9 +18,10 @@ st.sidebar.title("Pensamiento Computacional")
 with st.sidebar:
     opciones = option_menu("Temas de clase: ",["Introducción","Mi primer código en Python", 
             "Variables", "Tipos de datos", "Operadores aritméticos", "Cadena de caracteres", "Listas", 
-            "Expresiones booleanas", "Declaraciones condicionales", "Bucles", "Diccionarios", "Librerías", "Abrir archivos"] , 
+            "Expresiones booleanas", "Declaraciones condicionales", "Bucles", "Diccionarios", "Librerías", "Abrir archivos", 
+                                               "Exposiciones de los proyectos 2026-I"] , 
         icons=['0-circle','1-circle', '2-circle', '3-circle', 'calculator', 'alphabet', 'list', '7-circle', '8-circle', '9-circle', 'braces', 
-               'collection', 'file-earmark-arrow-up'], menu_icon="filetype-py", default_index=1)
+               'collection', 'file-earmark-arrow-up', 'card-checklist'], menu_icon="filetype-py", default_index=13)
 
 if opciones == "Introducción":
     st.markdown(f'<h2 style="font-size: 40px; text-align: center; color: #4E4E8A">¿Qué es programar? 🤔</h2>', unsafe_allow_html=True)
@@ -1247,6 +1248,39 @@ if opciones == "Abrir archivos":
     - Se abre el archivo y se lee su contenido.
     - Se imprime el contenido del archivo.
     """)
+if opciones == "Exposiciones de los proyectos 2026-I":
+    st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Encuesta de evaluación de exposiciones</h2>', unsafe_allow_html=True)
+
+    exposiciones = {
+        "Grupo 1 - Andrea Goicochea, Flavia Zambrano y Kantú Espinoza": {
+            "tipo": "youtube",
+            "url": "https://youtu.be/2ygdCD7oqHA?feature=shared"
+        },
+        "Grupo 2 - Fernanda Espada, Jenny Rivera y Lorena Encalada": {
+            "tipo": "drive",
+            "url": "https://drive.google.com/file/d/1XYpupWic7tD9ZTVRWP_QzOzqBgTsnwRg/view?usp=sharing"
+        },
+        "Grupo 3 - Macarena Apaza, Fiorella Machado y Fiorella Sánchez": {
+            "tipo": "drive",
+            "url": "https://drive.google.com/file/d/1o0kMfX3spHDzgb2ZfodakE7DARoi9wHA/view?usp=drivesdk"
+        },
+        "Grupo 4 - Natalya Gente, Thais Guillen y Jimena Cieza": {
+            "tipo": "youtube",
+            "url": "https://youtu.be/_mhRgHZAxZE"
+        },
+        "Grupo 5 - Ccori Arias y Adrián Salazar": {
+            "tipo": "drive",
+            "url": "https://drive.google.com/file/d/17Vfhtdchqdmmr-ePUvWddseSCkB43zb0/view?usp=sharing"
+        },
+        "Grupo 6 - Proyecto F": {
+            "tipo": "sin_entrega"
+        }
+    }
+
+    grupo = st.selectbox(
+        "Seleccione una exposición",
+        list(exposiciones.keys())
+    )
 
 st.markdown(""" 
 <hr style="margin-top:40px; margin-bottom:20px;"> 
