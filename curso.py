@@ -1256,7 +1256,7 @@ if opciones == "Exposiciones de los proyectos 2026-I":
     1. Revise en el documento de distribución qué exposiciones le corresponde evaluar.
     2. Visualice las exposiciones asignadas.
     3. Complete el formulario de evaluación para cada exposición observada.
-    4. Recuerde brindar comentarios respetuosos y constructivos que puedan ayudar a sus compañeros a mejorar futuras presentaciones.
+    4. Recuerde brindar comentarios constructivos que puedan ayudar a sus compañeros a mejorar sus proyectos y futuras presentaciones.
     """)
     
     col50, col51 = st.columns(2)
