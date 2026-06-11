@@ -1314,11 +1314,11 @@ if opciones == "Exposiciones de los proyectos 2026-I":
             info["url"]
         )
     elif info["tipo"] == "canva":
-    st.info("🎨 La exposición se encuentra alojada en Canva.")
-    st.link_button(
-        "Abrir presentación en Canva",
-        info["url"]
-    )
+        st.info("🎨 La exposición se encuentra alojada en Canva.")
+        st.link_button(
+            "Abrir presentación en Canva",
+            info["url"]
+        )
     elif info["tipo"] == "sin_entrega":
         st.warning("⚠️ Este grupo no entregó la grabación de su exposición.")
 
