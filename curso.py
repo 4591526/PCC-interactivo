@@ -1280,6 +1280,20 @@ if opciones == "Exposiciones de los proyectos 2026-I":
         "Seleccione una exposición",
         list(exposiciones.keys())
     )
+    info = exposiciones[grupo]
+
+    if info["tipo"] == "youtube":
+        st.video(info["url"])
+
+    elif info["tipo"] == "drive":
+        st.info("La exposición se encuentra alojada en Google Drive.")
+        st.link_button(
+            "📂 Abrir presentación",
+            info["url"]
+        )
+
+    elif info["tipo"] == "sin_entrega":
+        st.warning("⚠️ Este grupo no entregó la grabación de su exposición.")
 
 st.markdown(""" 
 <hr style="margin-top:40px; margin-bottom:20px;"> 
