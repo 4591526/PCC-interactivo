@@ -1250,6 +1250,32 @@ if opciones == "Abrir archivos":
 if opciones == "Exposiciones de los proyectos 2026-I":
     st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Encuesta de evaluación de exposiciones</h2>', unsafe_allow_html=True)
 
+    st.markdown("""
+    ### Instrucciones
+    
+    1. Revise en el documento de distribución qué exposiciones le corresponde evaluar.
+    2. Visualice las exposiciones asignadas.
+    3. Complete el formulario de evaluación para cada exposición observada.
+    4. Recuerde brindar comentarios respetuosos y constructivos que puedan ayudar a sus compañeros a mejorar futuras presentaciones.
+    """)
+    
+    col50, col51 = st.columns(2)
+    
+    with col50:
+        st.link_button(
+            "📋 Ver distribución de evaluaciones",
+            "https://docs.google.com/spreadsheets/d/1TsBPnfvIVK04o8CJhS9XESNMzW79Sc7UrihfzcaXS_0/edit?gid=1762319628#gid=1762319628"
+        )
+    
+    with col51:
+        st.link_button(
+            "📝 Ir al formulario de evaluación",
+            "https://docs.google.com/forms/d/e/1FAIpQLSdKE5eSQy_6rXkSeqmJn3D019h5dLtswGPt-Fif8yenR7rBpg/viewform?usp=header"
+        )
+    
+    st.divider()
+
+    
     exposiciones = {
         "Grupo 1 - Andrea Goicochea, Flavia Zambrano y Kantú Espinoza": {
             "tipo": "youtube",
