@@ -1313,7 +1313,8 @@ if opciones == "Exposiciones de los proyectos 2026-I":
             "tipo": "sin_entrega"
         },
         "Nicolie Chiroque": {
-            "tipo": "sin_entrega"
+            "tipo": "youtube",
+            "url": "https://youtube.com/watch?v=HxohdI57SiQ&si=R4_yKHN55wUMp1xm"
         },
         "Julia Fabian": {
             "tipo": "drive",
