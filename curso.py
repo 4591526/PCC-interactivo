@@ -1309,9 +1309,6 @@ if opciones == "Exposiciones de los proyectos 2026-I":
             "tipo": "canva",
             "url": "https://canva.link/sekfxj7b57e9oaf"
         },
-        "Omar Carrasco": {
-            "tipo": "sin_entrega"
-        },
         "Nicolie Chiroque": {
             "tipo": "youtube",
             "url": "https://youtube.com/watch?v=HxohdI57SiQ&si=R4_yKHN55wUMp1xm"
