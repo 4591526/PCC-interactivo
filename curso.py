@@ -18,9 +18,9 @@ st.sidebar.title("Pensamiento Computacional")
 with st.sidebar:
     opciones = option_menu("Temas de clase: ",["Introducción","Mi primer código en Python", 
             "Variables", "Tipos de datos", "Operadores aritméticos", "Cadena de caracteres", "Listas", 
-            "Expresiones booleanas", "Declaraciones condicionales", "Bucles", "Diccionarios", "Librerías", "Abrir archivos", "Exposiciones de los proyectos 2026-I"] , 
+            "Expresiones booleanas", "Declaraciones condicionales", "Bucles", "Diccionarios", "Librerías", "Abrir archivos"] , 
         icons=['0-circle','1-circle', '2-circle', '3-circle', 'calculator', 'alphabet', 'list', '7-circle', '8-circle', '9-circle', 'braces', 
-               'collection', 'file-earmark-arrow-up', 'card-checklist'], menu_icon="filetype-py", default_index=13)
+               'collection', 'file-earmark-arrow-up'], menu_icon="filetype-py", default_index=1)
 
 if opciones == "Introducción":
     st.markdown(f'<h2 style="font-size: 40px; text-align: center; color: #4E4E8A">¿Qué es programar? 🤔</h2>', unsafe_allow_html=True)
@@ -1247,101 +1247,6 @@ if opciones == "Abrir archivos":
     - Se abre el archivo y se lee su contenido.
     - Se imprime el contenido del archivo.
     """)
-if opciones == "Exposiciones de los proyectos 2026-I":
-    st.markdown(f'<h2 style="font-size: 42px; text-align: center; ">Encuesta de evaluación de exposiciones</h2>', unsafe_allow_html=True)
-
-    st.markdown("""
-    ### Instrucciones
-    
-    1. Revise en el documento de distribución qué exposiciones le corresponde evaluar.
-    2. Visualice las exposiciones asignadas.
-    3. Complete el formulario de evaluación para cada exposición observada.
-    4. Recuerde brindar comentarios constructivos que puedan ayudar a sus compañeros a mejorar sus proyectos y futuras presentaciones.
-    """)
-    
-    col50, col51 = st.columns(2)
-    
-    with col50:
-        st.link_button(
-            "📋 Ver distribución de evaluaciones",
-            "https://docs.google.com/spreadsheets/d/1TsBPnfvIVK04o8CJhS9XESNMzW79Sc7UrihfzcaXS_0/edit?gid=1762319628#gid=1762319628"
-        )
-    
-    with col51:
-        st.link_button(
-            "📝 Ir al formulario de evaluación",
-            "https://docs.google.com/forms/d/e/1FAIpQLSdKE5eSQy_6rXkSeqmJn3D019h5dLtswGPt-Fif8yenR7rBpg/viewform?usp=header"
-        )
-    
-    st.divider()
-
-    
-    exposiciones = {
-        "Grupo 1 - Andrea Goicochea, Flavia Zambrano y Kantú Espinoza": {
-            "tipo": "youtube",
-            "url": "https://youtu.be/2ygdCD7oqHA?feature=shared"
-        },
-        "Grupo 2 - Fernanda Espada, Jenny Rivera y Lorena Encalada": {
-            "tipo": "drive",
-            "url": "https://drive.google.com/file/d/1XYpupWic7tD9ZTVRWP_QzOzqBgTsnwRg/view?usp=sharing"
-        },
-        "Grupo 3 - Macarena Apaza, Fiorella Machado y Fiorella Sánchez": {
-            "tipo": "drive",
-            "url": "https://drive.google.com/file/d/1o0kMfX3spHDzgb2ZfodakE7DARoi9wHA/view?usp=drivesdk"
-        },
-        "Grupo 4 - Natalya Gente, Thais Guillen y Jimena Cieza": {
-            "tipo": "youtube",
-            "url": "https://youtu.be/_mhRgHZAxZE"
-        },
-        "Grupo 5 - Ccori Arias y Adrián Salazar": {
-            "tipo": "drive",
-            "url": "https://drive.google.com/file/d/17Vfhtdchqdmmr-ePUvWddseSCkB43zb0/view?usp=sharing"
-        },
-        "Joselyn Luis": {
-            "tipo": "drive",
-            "url": "https://drive.google.com/file/d/1Jy3tUUKQplLOZGgyQj4qtGEVb1RqQYzn/view?usp=sharing"
-        },
-        "Ernesto Silva": {
-            "tipo": "drive",
-            "url": "https://drive.google.com/drive/folders/1eYi1i6LAHCkR7QqSn51cEVSnML8IMPA7?usp=drive_link"
-        },
-        "Ana Ibañez": {
-            "tipo": "canva",
-            "url": "https://canva.link/sekfxj7b57e9oaf"
-        },
-        "Nicolie Chiroque": {
-            "tipo": "youtube",
-            "url": "https://youtube.com/watch?v=HxohdI57SiQ&si=R4_yKHN55wUMp1xm"
-        },
-        "Julia Fabian": {
-            "tipo": "drive",
-            "url": "https://drive.google.com/drive/folders/14FLKStX2HgaO0rHkkw2V84uNkqGXbxPd?usp=sharing"
-        }
-    }
-
-    grupo = st.selectbox(
-        "Seleccione una exposición",
-        list(exposiciones.keys())
-    )
-    info = exposiciones[grupo]
-
-    if info["tipo"] == "youtube":
-        st.video(info["url"])
-
-    elif info["tipo"] == "drive":
-        st.info("La exposición se encuentra alojada en Google Drive.")
-        st.link_button(
-            "📂 Abrir presentación",
-            info["url"]
-        )
-    elif info["tipo"] == "canva":
-        st.info("🎨 La exposición se encuentra alojada en Canva.")
-        st.link_button(
-            "Abrir presentación en Canva",
-            info["url"]
-        )
-    elif info["tipo"] == "sin_entrega":
-        st.warning("⚠️ No entregó la grabación de su exposición.")
 
 st.markdown(""" 
 <hr style="margin-top:40px; margin-bottom:20px;"> 
